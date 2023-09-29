@@ -1,5 +1,5 @@
 import express from "express";
-import consts from "../constants/index";
+import consts from "./constants/index";
 import database from "./database/connection";
 
 class App {
