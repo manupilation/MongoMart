@@ -12,10 +12,7 @@ class App {
   }
 
   start() {
-    database.connection().catch((err) => err 
-      ? console.log(err) 
-      : console.log("Connection established.")
-    );
+    database.connection().catch((err) => console.error(err));
 
     this.app.listen(this.PORT, () => {
       console.log("App rodando liso na porta " + this.PORT);

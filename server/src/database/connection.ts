@@ -4,7 +4,8 @@ import constants from "../../constants";
 const database = {
   async connection() {
     set("strictQuery", true);
-    await connect(constants.mongoUri);
+    await connect(constants.mongoUri).then(() => console.log("Connection established.")
+    );
   }
 }
 
