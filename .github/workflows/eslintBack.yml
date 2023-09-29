@@ -11,5 +11,5 @@ jobs:
     - name: Install dependencies
       run: cd server && npm install
 
-    - name: Run tests
-      run: npm run lint
+    - name: Run lint test
+      run: cd server && npm run lint
