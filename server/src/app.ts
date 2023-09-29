@@ -1,16 +1,23 @@
 import express from "express";
+import consts from "../constants/index";
+import database from "./database/connection";
 
 class App {
   app: express.Application;
   PORT: number;
-  
+
   constructor() {
     this.app = express();
-    this.PORT = 3000;
+    this.PORT = Number(consts.port);
   }
 
   start() {
-    this.app.listen(3000, () => {
+    database.connection().catch((err) => err 
+      ? console.log(err) 
+      : console.log("Connection established.")
+    );
+
+    this.app.listen(this.PORT, () => {
       console.log("App rodando liso na porta " + this.PORT);
     });
   }
