@@ -1,10 +1,11 @@
-import mongoose, { Schema, model } from "mongoose";
+import mongoose, { Schema, model, mongo } from "mongoose";
 
 const Product = new Schema({
   id: {
-    type: Schema.Types.String,
+    type: Schema.Types.ObjectId,
     unique: true,
     required: true,
+    default: new mongo.ObjectId(),
   },
   name: {
     type: Schema.Types.String,
