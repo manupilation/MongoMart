@@ -5,4 +5,9 @@ type product = {
   discountRate?: number,
 }
 
+export type updateProduct = {
+  id: string,
+  body: product,
+}
+
 export default product;
