@@ -1,6 +1,11 @@
-import product from "../../src/types/Product";
+import product, { updateProduct } from "../../src/types/Product";
+import { defaultProduct } from "./product";
 
 const ProductDBModelMock = {
+  getProducts() {
+    return new Array(5).fill(defaultProduct);
+  },
+
   create(product: product) {
     return {
       ...product,
@@ -8,6 +13,17 @@ const ProductDBModelMock = {
       date: Date.now(),
       save: () => {},
     }
+  },
+
+  update(product: updateProduct) {
+    return {
+      ...product,
+      save: () => {},
+    }
+  },
+
+  delete(id: string) {
+    return "ok";
   }
 }
 
