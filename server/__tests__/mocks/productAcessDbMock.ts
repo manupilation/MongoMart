@@ -2,8 +2,20 @@ import product, { updateProduct } from "../../src/types/Product";
 import { defaultProduct } from "./product";
 
 const ProductDBModelMock = {
-  getProducts() {
-    return new Array(5).fill(defaultProduct);
+  find() {
+    return { limit: () => new Array(5).fill(defaultProduct)};
+  },
+
+  findOne(id: string) {
+    return defaultProduct;
+  },
+
+  findOneAndUpdate(id: string, body: product) {
+    return defaultProduct;
+  },
+
+  findOneAndDelete(id: string) {
+    return "ok";
   },
 
   create(product: product) {
