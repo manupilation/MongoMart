@@ -10,4 +10,8 @@ export type updateProduct = {
   body: product,
 }
 
+export type RequestWithBody = Request & {
+  body: any;
+};
+
 export default product;
