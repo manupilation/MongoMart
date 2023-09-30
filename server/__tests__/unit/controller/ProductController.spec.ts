@@ -23,12 +23,27 @@ describe('Tests ProductController Class', () => {
 
   afterAll(() => jest.clearAllMocks());
 
-  test('Tests route CreateProduct', async () => {
+  test('Tests controller CreateProduct', async () => {
     req.body = newProduct;
     await productController.createProduct(req, res);
 
     expect(res.status).toBeCalledWith(201);
     expect(res.json).toBeCalledWith({ product: defaultProduct });
+  });
+
+  test('Tests controller getProducts', async () => {
+    await productController.getProducts(req, res);
+
+    expect(res.status).toBeCalledWith(200);
+    expect(res.json).toBeCalledWith({ products: new Array(5).fill(newProduct) });
+  });
+
+  test('Tests controller getProduct', async () => {
+    req.params = "fakeId"
+    await productController.getProduct(req, res);
+
+    expect(res.status).toBeCalledWith(200);
+    expect(res.json).toBeCalledWith({ products: newProduct });
   });
 });
 
