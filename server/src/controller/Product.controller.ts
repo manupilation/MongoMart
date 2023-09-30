@@ -16,6 +16,19 @@ class ProductController {
 
     res.status(HttpStatus.Created).json({product: create});
   }
+
+  async getProducts(_req: RequestWithBody, res: Response): Promise<void> {
+    const products = await this.productModel.getProducts();
+
+    res.status(HttpStatus.OK).json({products: products })
+  }
+
+  async getProduct(req: RequestWithBody, res: Response): Promise<void> {
+    const { id } = req.params;
+    const product = await this.productModel.getProduct(id);
+
+    res.status(HttpStatus.OK).json({products: product })
+  }
 }
 
 export default ProductController;
