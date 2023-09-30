@@ -36,6 +36,13 @@ class ProductController {
 
     res.status(HttpStatus.OK).json({product: product });
   }
+
+  async deleteProduct(req: RequestWithBody, res: Response): Promise<void> {
+    const { id } = req.body;
+    await this.productModel.deleteProduct(id);
+
+    res.status(HttpStatus.OK).json({ excluded: "ok" });
+  }
 }
 
 export default ProductController;
