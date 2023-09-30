@@ -23,9 +23,10 @@ export const updateProduct = {
   id: "idProduct",
   body: {
     name: "newName",
-    price: "newPrice",
+    price: 55.44,
     image: "newImage",
-    discountRate: "newDiscountRate",
+    discountRate: 14,
+    id: "idProduct",
   }
 }
 
