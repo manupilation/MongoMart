@@ -1,6 +1,8 @@
 import express from "express";
 import consts from "./constants/index";
 import database from "./database/connection";
+import { generalError } from "./middlewares/GeneralError";
+import cors from "cors";
 
 class App {
   app: express.Application;
@@ -9,6 +11,23 @@ class App {
   constructor() {
     this.app = express();
     this.PORT = Number(consts.port);
+
+    this.config();
+
+    this.errorMiddlewars();
+  }
+
+  config() {
+    this.app.use(express.json());
+
+    this.app.use(cors({
+      methods: ['GET','POST','DELETE','UPDATE'],
+      origin: "*"
+    }));
+  }
+
+  errorMiddlewars() {
+    this.app.use(generalError);
   }
 
   start() {
