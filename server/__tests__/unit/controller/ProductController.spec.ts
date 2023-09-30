@@ -55,7 +55,7 @@ describe('Tests ProductController Class', () => {
   });
   
   test('Tests controller deleteProduct', async () => {
-    req.params = "fakeId"
+    req.body = "fakeId"
     await productController.deleteProduct(req, res);
 
     expect(res.status).toBeCalledWith(200);
