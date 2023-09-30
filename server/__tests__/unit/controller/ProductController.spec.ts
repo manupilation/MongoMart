@@ -43,7 +43,15 @@ describe('Tests ProductController Class', () => {
     await productController.getProduct(req, res);
 
     expect(res.status).toBeCalledWith(200);
-    expect(res.json).toBeCalledWith({ products: newProduct });
+    expect(res.json).toBeCalledWith({ product: newProduct });
+  });
+
+  test('Tests controller updateProduct', async () => {
+    req.body = { id: "fakeId", product: {} }
+    await productController.updateProduct(req, res);
+
+    expect(res.status).toBeCalledWith(200);
+    expect(res.json).toBeCalledWith({ product: defaultProduct });
   });
 });
 
