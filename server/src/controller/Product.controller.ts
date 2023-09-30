@@ -1,6 +1,6 @@
 import { Response } from "express";
 import ProductModel from "../model/Products.model";
-import product, { RequestWithBody } from "../types/Product";
+import product, { RequestWithBody, updateProduct } from "../types/Product";
 import HttpStatus from "../enum/HTTPStatus";
 
 class ProductController {
@@ -20,14 +20,21 @@ class ProductController {
   async getProducts(_req: RequestWithBody, res: Response): Promise<void> {
     const products = await this.productModel.getProducts();
 
-    res.status(HttpStatus.OK).json({products: products })
+    res.status(HttpStatus.OK).json({products: products });
   }
 
   async getProduct(req: RequestWithBody, res: Response): Promise<void> {
     const { id } = req.params;
     const product = await this.productModel.getProduct(id);
 
-    res.status(HttpStatus.OK).json({products: product })
+    res.status(HttpStatus.OK).json({product: product });
+  }
+
+  async updateProduct(req: RequestWithBody, res: Response): Promise<void> {
+    const { body } = req;
+    const product = await this.productModel.updateProduct(body as updateProduct);
+
+    res.status(HttpStatus.OK).json({product: product });
   }
 }
 
