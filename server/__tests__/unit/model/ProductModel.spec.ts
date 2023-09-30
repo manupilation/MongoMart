@@ -27,10 +27,10 @@ describe('Tests ProductModel class', () => {
     expect(getProducts.length).toBe(5);
   });
 
-  test('Tests if ProductModel can get 5 products', async () => {
-    const getProduct = await productModel.getProduct();
+  test('Tests if ProductModel can get a product', async () => {
+    const getProduct = await productModel.getProduct("123456789");
 
-    expect(getProduct.length).toBe(5);
+    keysProducts.map((key) => expect(getProduct).toHaveProperty(key));
   });
 
   test('Tests if ProductModel can update a product', async () => {
@@ -40,7 +40,7 @@ describe('Tests ProductModel class', () => {
   });
 
   test('Tests if ProductModel can delete a product', async () => {
-    const deleteProduct = await productModel.deleteProduct({id: "123456879"});
+    const deleteProduct = await productModel.deleteProduct("123456879");
 
     expect(deleteProduct).toBe("ok");
   });
