@@ -11,7 +11,8 @@ export type updateProduct = {
 }
 
 export type RequestWithBody = Request & {
-  body: any;
+  body?: any;
+  params?: any;
 };
 
 export default product;
