@@ -17,7 +17,7 @@ class ProductModelMock {
     return defaultProduct;
   }
 
-  deteleProduct(req: Request, res: Response) {
+  deleteProduct(req: Request, res: Response) {
     return "ok";
   }
 }
