@@ -16,6 +16,10 @@ class ProductModelMock {
   updateProduct(req: Request, res: Response) {
     return defaultProduct;
   }
+
+  deteleProduct(req: Request, res: Response) {
+    return "ok";
+  }
 }
 
 export default ProductModelMock;

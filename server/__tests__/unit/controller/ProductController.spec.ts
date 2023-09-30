@@ -53,5 +53,13 @@ describe('Tests ProductController Class', () => {
     expect(res.status).toBeCalledWith(200);
     expect(res.json).toBeCalledWith({ product: defaultProduct });
   });
+  
+  test('Tests controller deleteProduct', async () => {
+    req.params = "fakeId"
+    await productController.deleteProduct(req, res);
+
+    expect(res.status).toBeCalledWith(200);
+    expect(res.json).toBeCalledWith({ excluded: "ok" });
+  });
 });
 
