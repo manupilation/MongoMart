@@ -1,0 +1,15 @@
+name: Eslint Backend
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        cache: npm
+    - name: Install dependencies
+      run: cd server && npm install
+
+    - name: Run lint test
+      run: cd server && npm run lint

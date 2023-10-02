@@ -30,4 +30,4 @@ const Product = new Schema({
   versionKey: false,
 });
 
-export const ProductModel = model("products", Product, "products");
+export const ProductDBModel = model("products", Product, "products");
