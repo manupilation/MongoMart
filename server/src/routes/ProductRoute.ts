@@ -6,7 +6,7 @@ const productController = new ProductController();
 const productRoute = express.Router();
 
 productRoute.post("/product", (req: Request<any>, res: Response<any>, _: NextFunction) => {
-    return productController.createProduct(req, res, _);
-  });
+  return productController.createProduct(req, res, _);
+});
 
 export default productRoute;
