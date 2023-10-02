@@ -21,4 +21,8 @@ productRoute.put("/product", (req: Request<any>, res: Response<any>, _: NextFunc
   return productController.updateProduct(req, res, _);
 });
 
+productRoute.delete("/product", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.deleteProduct(req, res, _);
+});
+
 export default productRoute;
