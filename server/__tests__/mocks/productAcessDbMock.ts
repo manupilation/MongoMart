@@ -19,12 +19,17 @@ const ProductDBModelMock = {
   },
 
   create(product: product) {
-    return {
-      ...product,
-      id: "123",
-      date: Date.now(),
-      save: () => {},
-    }
+  const obj = {
+    save: () => ({
+      toObject: () => ({
+        ...product,
+        id: "123",
+        date: Date.now(),
+      }),
+    })
+  };
+  
+  return obj
   },
 
   update(product: updateProduct) {

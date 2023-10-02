@@ -1,16 +1,16 @@
+import { Request, Response } from "express";
 import ProductModelMock from "../../mocks/productModelMock";
-import ProductController from "../../../src/controller/Product.controller"
+import ProductController from "../../../src/controller/ProductsController"
 import newProduct, { defaultProduct } from "../../mocks/product";
-import { RequestWithBody } from "../../../src/types/Product";
-import { Response } from "express";
+import product from "../../../src/types/Product";
 
 
 describe('Tests ProductController Class', () => {
-  let req: RequestWithBody, res: Response;
+  let req: any, res: Response;
   let productController: ProductController;
 
   beforeAll(() => {
-    req = {} as RequestWithBody;
+    req = {} as any;
     res = {} as Response;
   });
 
