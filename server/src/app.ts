@@ -4,6 +4,7 @@ import database from "./database/connection";
 import { generalError } from "./middlewares/GeneralError";
 import cors from "cors";
 import productRoute from "./routes/ProductRoute";
+import "express-async-errors";
 
 class App {
   app: express.Application;
