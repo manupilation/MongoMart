@@ -1,6 +1,7 @@
-import { NextFunction, Request, Response, ErrorRequestHandler } from "express";
+import { NextFunction, Request, Response } from "express";
 import HttpStatus from "../enum/HTTPStatus";
+import ErrorHandler from "../helper/ErrorHandler";
 
-export function generalError(err: ErrorRequestHandler,req: Request, res: Response, next: NextFunction) {
-  res.status(HttpStatus.InternalServerError).json({ message: "Internal error. Please try again."});
+export function generalError(err: ErrorHandler, _req: Request, res: Response, _next: NextFunction) {
+  res.status(HttpStatus.InternalServerError).json({ message: err.message || "Internal error. Please try again."});
 }
