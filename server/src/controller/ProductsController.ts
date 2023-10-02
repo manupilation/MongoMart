@@ -24,8 +24,10 @@ class ProductController {
     res.status(HttpStatus.OK).json({products: products });
   });
 
-   getProduct = resolver(async (req: Request<{body: {id: string}}>, res: Response, _: NextFunction): Promise<void> => {
-    const { id } = req.body;
+   getProduct = resolver(async (req: Request, res: Response, _: NextFunction): Promise<void> => {
+    const { id } = req.params;
+    console.log(id);
+
     const product = await this.productModel.getProduct(id);
 
     res.status(HttpStatus.OK).json({product: product });

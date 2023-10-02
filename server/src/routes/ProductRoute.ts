@@ -9,4 +9,12 @@ productRoute.post("/product", (req: Request<any>, res: Response<any>, _: NextFun
   return productController.createProduct(req, res, _);
 });
 
+productRoute.get("/products", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.getProducts(req, res, _);
+});
+
+productRoute.get("/product/:id", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.getProduct(req, res, _);
+});
+
 export default productRoute;
