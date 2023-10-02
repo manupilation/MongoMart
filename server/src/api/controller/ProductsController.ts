@@ -1,8 +1,8 @@
 import { NextFunction, Request, Response } from "express";
 import ProductModel from "../model/Productsmodel";
-import product, { updateProduct } from "../types/Product";
-import HttpStatus from "../enum/HTTPStatus";
-import resolver from "../helper/Resolver";
+import product, { updateProduct } from "../../types/Product";
+import HttpStatus from "../../enum/HTTPStatus";
+import resolver from "../../helper/Resolver";
 
 class ProductController {
   private productModel: ProductModel;

@@ -1,6 +1,6 @@
 import { NextFunction, Response } from "express";
 import ProductModelMock from "../../mocks/productModelMock";
-import ProductController from "../../../src/controller/ProductsController"
+import ProductController from "../../../src/api/controller/ProductsController"
 import newProduct, { defaultProduct } from "../../mocks/product";
 import product from "../../../src/types/Product";
 

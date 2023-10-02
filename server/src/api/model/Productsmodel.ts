@@ -1,4 +1,4 @@
-import product, { updateProduct } from "../types/Product";
+import product, { updateProduct } from "../../types/Product";
 import { ProductDBModel } from "./Product"
 
 class ProductModel {

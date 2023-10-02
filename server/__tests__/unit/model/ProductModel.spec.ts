@@ -1,4 +1,4 @@
-import ProductModel from "../../../src/model/Productsmodel";
+import ProductModel from "../../../src/api/model/Productsmodel";
 import newProduct, { keys as keysProducts, updateProduct } from "../../mocks/product";
 import ProductDBModelMock from "../../mocks/productAcessDbMock";
 import { jest } from '@jest/globals';
