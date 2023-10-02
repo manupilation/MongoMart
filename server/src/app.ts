@@ -5,6 +5,7 @@ import { generalError } from "./api/middlewares/GeneralError";
 import cors from "cors";
 import productRoute from "./api/routes/ProductRoute";
 import "express-async-errors";
+import specificErrorsThreatment from "./api/middlewares/specificErrors";
 
 class App {
   app: express.Application;
@@ -36,6 +37,7 @@ class App {
   }
 
   errorMiddlewars() {
+    this.app.use(specificErrorsThreatment);
     this.app.use(generalError);
   }
 
