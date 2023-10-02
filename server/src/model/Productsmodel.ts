@@ -31,7 +31,7 @@ class ProductModel {
   }
 
   async updateProduct(product: updateProduct) {
-    const updateProduct = await this.productAccessDb.findOneAndUpdate({ id: product.id }, { ...product.body });
+    const updateProduct = await this.productAccessDb.findOneAndUpdate({ id: product.id }, { ...product.body }, {new: true});
 
     return updateProduct;
   }
