@@ -17,4 +17,8 @@ productRoute.get("/product/:id", (req: Request<any>, res: Response<any>, _: Next
   return productController.getProduct(req, res, _);
 });
 
+productRoute.put("/product", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.updateProduct(req, res, _);
+});
+
 export default productRoute;
