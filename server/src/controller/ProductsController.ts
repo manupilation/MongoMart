@@ -26,7 +26,6 @@ class ProductController {
 
    getProduct = resolver(async (req: Request, res: Response, _: NextFunction): Promise<void> => {
     const { id } = req.params;
-    console.log(id);
 
     const product = await this.productModel.getProduct(id);
 
