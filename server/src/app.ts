@@ -3,6 +3,7 @@ import consts from "./constants/index";
 import database from "./database/connection";
 import { generalError } from "./middlewares/GeneralError";
 import cors from "cors";
+import productRoute from "./routes/ProductRoute";
 
 class App {
   app: express.Application;
@@ -14,6 +15,8 @@ class App {
 
     this.config();
 
+    this.activeRoutes();
+
     this.errorMiddlewars();
   }
 
@@ -24,6 +27,11 @@ class App {
       methods: ['GET','POST','DELETE','UPDATE'],
       origin: "*"
     }));
+  }
+
+
+  activeRoutes() {
+    this.app.use(productRoute);
   }
 
   errorMiddlewars() {
