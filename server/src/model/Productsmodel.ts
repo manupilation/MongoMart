@@ -10,10 +10,10 @@ class ProductModel {
   async createProduct(product: product) {
     const create = await this.productAccessDb.create(product);
 
-    create.save();
+    const obj = (await create.save()).toObject();
 
     return {
-      ...create,
+      ...obj,
       price: Number(create.price),
     };
   }
