@@ -1,0 +1,79 @@
+.productWrapper {
+  background-color: #FFF;
+  width: 222px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  max-height: 350px;
+  margin-bottom: 15px;
+
+  > h5 {
+    margin-left: 1rem;
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: .8rem;
+  }
+
+  .productImage {
+    min-width: 100%;
+    border-bottom: 1px solid #DDD;
+    margin-bottom: .5rem;
+
+    > img {
+      border-radius: 4px 4px 0 0;
+      width: 100%;
+    }
+  }
+
+  .productPriceSection {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    > div {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+    }
+
+    .price {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+      margin-bottom: .5rem;
+      color: #333;
+    }
+
+    .discountRate {
+      color: #25B626;
+      font-size: .7rem;
+      font-weight: 600;
+    }
+
+    .productOriginalPrice {
+      font-size: .8rem;
+      font-weight: 600;
+      text-decoration: line-through;
+      color: #999;
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity 1s ease-out;
+      margin-bottom: .5rem;
+    }
+  }
+}
+
+.productWrapper:hover {
+  box-shadow: 2px 2px 8px rgba(150, 150, 150, .8), -2px 4px 8px rgba(150, 150, 150, .8);
+}
+
+.productWrapper:hover.withDiscount {
+  max-height: 370px;
+  margin-bottom: -20px;
+  padding-bottom: 22px;
+
+  .productOriginalPrice {
+    opacity: 1;
+    height: auto;
+  }
+}
