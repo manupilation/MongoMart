@@ -1,0 +1,56 @@
+[
+  {
+    "id": "I498WRGE984EQHHCRW498",
+    "name": "Geladeira babadeira",
+    "price": 2700.66,
+    "image": "https://http2.mlstatic.com/D_621033-MLA49061312577_022022-I.jpg",
+    "discountRate": 7,
+    "date": "02/10/2023"
+  },
+  {
+    "id": "I498WRGE984AEQHHRW498",
+    "name": "Geladeira Paola",
+    "price": 2399.99,
+    "image": "https://http2.mlstatic.com/D_876147-MLA53583659676_022023-I.jpg",
+    "discountRate": 5,
+    "date": "02/10/2023"
+  },
+  {
+    "id": "I498WRGE984EQHHJRW498",
+    "name": "Freezer do Freeza",
+    "price": 1750,
+    "image": "https://http2.mlstatic.com/D_810728-MLA46076948346_052021-I.jpg",
+    "discountRate": 12,
+    "date": "02/10/2023"
+  },
+  {
+    "id": "I498WRGE984EHQHHRW498",
+    "name": "Geladeira com Freezer",
+    "price": 1870,
+    "image": "https://http2.mlstatic.com/D_753886-MLA44340968318_122020-I.jpg",
+    "discountRate": 3,
+    "date": "02/10/2023"
+  },
+  {
+    "id": "I498WRGE984ASEQHHRW498",
+    "name": "Freezer Babidi",
+    "price": 5999.99,
+    "image": "https://http2.mlstatic.com/D_709250-MLA46076948324_052021-I.jpg",
+    "date": "02/10/2023"
+  },
+  {
+    "id": "I498WRGE984EQHAHRW498",
+    "name": "Geladeira Raka no Togami",
+    "price": 1750,
+    "image": "https://http2.mlstatic.com/D_836215-MLB52992087442_122022-I.jpg",
+    "date": "02/10/2023"
+  },
+  {
+    "id": "I498WRGE984EQGGHHRW498",
+    "name": "Freezer Mayuri",
+    "price": 270.66,
+    "image": "https://http2.mlstatic.com/D_986757-MLU70074125762_062023-I.jpg",
+    "discountRate": 5,
+    "date": "02/10/2023"
+  }
+]
