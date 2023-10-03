@@ -3,6 +3,7 @@ import { editProductContext } from "../../context/editProductContext";
 import useOutsideClickHandler from "../../hooks/UseCloseModal";
 import isFormValid from "../../helper/isFormValid";
 import useFetchPut from "../../hooks/UseFetchPut";
+import "./editProductForm.css";
 
 function EditProductForm() {
   const { setIsEditing, productShape } = useContext(editProductContext);
@@ -39,7 +40,7 @@ function EditProductForm() {
   }
 
   return (
-    <form ref={editFormRef}>
+    <form ref={editFormRef} className="newProductForm">
       <label htmlFor="name">
         <input
           type="text"
@@ -86,6 +87,7 @@ function EditProductForm() {
 
       <button
         type="button"
+        className="editBtn"
         onClick={() => {
           isFormValid(editProduct) ?
             handleEditProduct() : setErr(true);
