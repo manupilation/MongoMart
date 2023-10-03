@@ -7,9 +7,12 @@ const EditProductModal = () => {
 
   if (isEditing)
   return (
-    <div>
-      <h3>Edite as informações do produto:</h3>
-      <EditProductForm />
+    <div className="modalContainer">
+      <div className="modalFormWrapper gr">
+        <h3>Edite as informações do produto:</h3>
+        <EditProductForm />
+
+      </div>
     </div>
   );
 }
