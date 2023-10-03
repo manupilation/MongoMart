@@ -24,10 +24,13 @@ const useFetchPut = () => {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          name: editProduct.name,
-          price: Number(`${editProduct.price}`.replace(",", ".")),
-          image: editProduct.image,
-          discountRate: Number(`${editProduct.discountRate}`.replace(",", ".")),
+          id: editProduct.id,
+          body: {
+            name: editProduct.name,
+            price: Number(`${editProduct.price}`.replace(",", ".")),
+            image: editProduct.image,
+            discountRate: Number(`${editProduct.discountRate}`.replace(",", ".")),
+          }
         }),
       });
 
