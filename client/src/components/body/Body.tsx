@@ -1,16 +1,21 @@
 import ProductList from "../productList/ProductList";
 import AddProduct from "../addProduct/addProduct";
-import "./Body.css";
 import ModalForm from "../modalForm/modalForm";
+import EditProductContext from "../../context/editProductContext";
+import EditProductModal from "../editProductModal/editProductModal";
+import "./Body.css";
 
 const Body = () => {
   return (
-    <div className="bodyWrapper">
-      <ModalForm />
-      <h1 className="text-3xl font-bold underline">Sistema de gerenciamento de produtos</h1>
-      <ProductList />
-      <AddProduct />
-    </div>
+    <EditProductContext>
+      <div className="bodyWrapper">
+        <ModalForm />
+        <EditProductModal />
+        <h1>Sistema de gerenciamento de produtos</h1>
+        <ProductList />
+        <AddProduct />
+      </div>
+    </EditProductContext>
   );
 }
 
