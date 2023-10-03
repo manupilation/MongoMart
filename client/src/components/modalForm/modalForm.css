@@ -10,12 +10,18 @@
   align-items: center;
   justify-content: center;
 
+
+  .modalFormWrapper.gr {
+    background-color: var(--col-gr);
+  }
+
   .modalFormWrapper {
     display: flex;
     flex-direction: column;
     padding: 4rem 4rem;
     background-color: var(--col-bl);
     position: relative;
+    border-radius: 8px;
 
     > h3 {
       font-size: 1.8rem;
