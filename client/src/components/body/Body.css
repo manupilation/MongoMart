@@ -1,5 +1,6 @@
 .bodyWrapper {
   margin: 0 5rem;
+  position: relative;
 
   > h1 {
     font-size: 2rem;
