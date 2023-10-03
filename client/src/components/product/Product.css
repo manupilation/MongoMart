@@ -5,6 +5,7 @@
   box-sizing: border-box;
   max-height: 350px;
   margin-bottom: 15px;
+  position: relative;
 
   > h5 {
     margin-left: 1rem;
@@ -65,6 +66,10 @@
 
 .productWrapper:hover {
   box-shadow: 2px 2px 8px rgba(150, 150, 150, .8), -2px 4px 8px rgba(150, 150, 150, .8);
+
+  .editWrapper {
+    opacity: 1;
+  }
 }
 
 .productWrapper:hover.withDiscount {

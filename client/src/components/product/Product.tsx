@@ -1,4 +1,5 @@
 import { product } from "../../types/product";
+import EditProduct from "../editProduct/editProduct";
 import "./Product.css";
 
 const Product = (props: product) => {
@@ -28,6 +29,8 @@ const Product = (props: product) => {
       </section>
 
       <h5>{name}</h5>
+
+      <EditProduct {...props}/>
     </div>
   );
 }
