@@ -1,8 +1,9 @@
-import { useContext, useEffect, useRef, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { globalContext } from "../../context/globalContext";
 import "./formNewProduct.css";
-
-const backendUrl = import.meta.env.VITE_BACKEND_URL;
+import isFormValid from "../../helper/isFormValid";
+import UseFetchPost from "../../hooks/UseFetchPost";
+import useOutsideClickHandler from "../../hooks/UseCloseModal";
 
 const FormNewProduct = () => {
   const {setIsCreating} = useContext(globalContext);
@@ -16,59 +17,17 @@ const FormNewProduct = () => {
 
   const formRef = useRef<HTMLFormElement | null>(null);
 
-  const isFormValid = () => {
-    const priceRegex = /^[0-9.,]+$/;
-    const discountRateRegex = /^[0-9]+$/;
-  
-    const isPriceValid = priceRegex.test(String(newProduct.price));
-    const isDiscountRateValid =
-      !newProduct.discountRate || discountRateRegex.test(String(newProduct.discountRate));
-    console.log(isDiscountRateValid, isPriceValid);
-      
-  
-    return (
-      newProduct.name.length > 3 &&
-      isPriceValid &&
-      newProduct.image.length > 8 &&
-      isDiscountRateValid
-    );
-  };
+  useOutsideClickHandler(formRef, () => {
+    setIsCreating(false);
+  });
 
-  useEffect(() => {
-    const handleOutsideClick = (event: MouseEvent) => {
-      if (formRef.current && !formRef.current.contains(event.target as Node)) {
-        setIsCreating(false);
-      }
-    };
-    document.addEventListener("mousedown", handleOutsideClick);
-
-    return () => {
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [setIsCreating]);
-  
-
-  function handleNewProduct() {
+  async function handleNewProduct() {
     try {
-      console.log(newProduct.name);
-      
-      fetch(backendUrl + "product", {
-        method: "POST",
-        mode: "cors",
-        cache: "no-cache",
-        credentials: "omit",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: newProduct.name,
-          price: Number(`${newProduct.price}`.replace(",", ".")),
-          image: newProduct.image,
-          discountRate: Number(`${newProduct.discountRate}`.replace(",", ".")),
-        }),
-      });
+      await UseFetchPost().request(newProduct);
     } catch(err) {
       console.error(err);
+    } finally {
+      setIsCreating(false);
     }
   }
 
@@ -129,7 +88,7 @@ const FormNewProduct = () => {
       <button
         type="button"
         onClick={() => {
-          isFormValid() ?
+          isFormValid(newProduct) ?
             handleNewProduct() : setErr(true);
         }}
       >
