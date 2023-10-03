@@ -5,7 +5,7 @@ import { globalContext } from "../../context/globalContext";
 const AddProduct = () => {
   const {setIsCreating} = useContext(globalContext);
 
-  function handleIsEditing(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+  function handleIsCreating(event: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
     event.preventDefault();
 
     setIsCreating(true);
@@ -16,7 +16,7 @@ const AddProduct = () => {
       <button 
         type="button" 
         className="addButton"
-        onClick={(e) => handleIsEditing(e)}
+        onClick={(e) => handleIsCreating(e)}
       >+</button>
     </div>
   )
