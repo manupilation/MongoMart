@@ -1,0 +1,8 @@
+.productListWrapper {
+  display: flex;
+  padding-bottom: 2rem;
+  gap: 5rem 3rem;
+  flex-wrap: wrap;
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+}
