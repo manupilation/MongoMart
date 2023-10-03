@@ -1,0 +1,18 @@
+.inputWrapper {
+  max-width: 50%;
+
+  .inputBar {
+    padding: .6rem .6rem;
+    box-sizing: border-box;
+    border: .25rem;
+    outline: 2px solid #444;
+    width: 100%;
+    border-radius: .25rem;
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+  
+    &:focus {
+      outline:  2px solid #664;
+    }
+  }
+}
