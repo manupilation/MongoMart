@@ -1,0 +1,21 @@
+.addButtonWrapper {
+  position: fixed;
+  top: 85%;
+  left: 90%;
+  z-index: 2;
+
+  .addButton {
+    border-radius: 50px;
+    cursor: pointer;
+    padding: .8rem 1.4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 4px solid #348834;
+    background-color: var(--col-gr);
+    color: #333;
+
+    &:hover {
+      background-color: #44AA44;
+    }
+  }
+}
