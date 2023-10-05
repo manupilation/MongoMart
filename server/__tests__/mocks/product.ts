@@ -30,6 +30,6 @@ export const updateProduct = {
   }
 }
 
-export const keys = ["id", "name", "price", "image", "discountRate", "date"];
+export const keys = ["id", "name", "price", "image", "discountRate"];
 
 export default newProduct;
