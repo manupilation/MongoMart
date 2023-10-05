@@ -10,7 +10,7 @@ export const defaultProduct = {
 const newProduct = {
   name: "Mousepad",
   price: 255.55,
-  image: "fakeurl",
+  image: "https://http2.mlstatic.com/D_744609-MLA32854739285_112019-I.jpg",
   discountRate: 16,
 }
 
