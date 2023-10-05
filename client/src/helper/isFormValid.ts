@@ -7,8 +7,6 @@ const isFormValid = (newProduct: newProduct) => {
   const isPriceValid = priceRegex.test(String(newProduct.price));
   const isDiscountRateValid =
     !newProduct.discountRate || discountRateRegex.test(String(newProduct.discountRate));
-  console.log(isDiscountRateValid, isPriceValid);
-    
 
   return (
     newProduct.name.length > 3 &&

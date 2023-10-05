@@ -2,11 +2,13 @@ import { useContext, useRef, useState } from "react";
 import { globalContext } from "../../context/globalContext";
 import "./formNewProduct.css";
 import isFormValid from "../../helper/isFormValid";
-import UseFetchPost from "../../hooks/UseFetchPost";
 import useOutsideClickHandler from "../../hooks/UseCloseModal";
+import { product } from "../../types/product";
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const FormNewProduct = () => {
-  const {setIsCreating} = useContext(globalContext);
+  const {setIsCreating, setProducts} = useContext(globalContext);
   const [err, setErr] = useState(false);
   const [newProduct, setNewProduct] = useState({
     name: "",
@@ -16,14 +18,33 @@ const FormNewProduct = () => {
   });
 
   const formRef = useRef<HTMLFormElement | null>(null);
-
   useOutsideClickHandler(formRef, () => {
     setIsCreating(false);
   });
 
   async function handleNewProduct() {
     try {
-      await UseFetchPost().request(newProduct);
+      const response = await (await fetch(backendUrl + "product", {
+        method: "POST",
+        mode: "cors",
+        cache: "force-cache",
+        credentials: "omit",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...newProduct,
+          price: Number(`${newProduct.price}`.replace(",", ".")),
+          discountRate: Number(`${newProduct.discountRate}`.replace(",", ".")),
+        })
+      })).json() as {product: product};
+
+      if(response) {
+        setProducts((prev) => ([
+          ...prev,
+          {...response.product},
+        ]));
+      }
     } catch(err) {
       console.error(err);
     } finally {
@@ -33,10 +54,7 @@ const FormNewProduct = () => {
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
-    setNewProduct((prevProduct) => ({
-      ...prevProduct,
-      [name]: value,
-    }));
+    setNewProduct((prevProduct) => ({...prevProduct, [name]: value}));
   }
 
   return (
@@ -51,7 +69,6 @@ const FormNewProduct = () => {
           placeholder="Nome do produto"
         />
       </label>
-
       <label htmlFor="price">
         <input
           type="text"
@@ -62,7 +79,6 @@ const FormNewProduct = () => {
           placeholder="Preço"
         />
       </label>
-
       <label htmlFor="image">
         <input
           type="text"
@@ -73,7 +89,6 @@ const FormNewProduct = () => {
           placeholder="URL da imagem do produto"
         />
       </label>
-
       <label htmlFor="discountRate">
         <input
           type="text"
@@ -84,7 +99,6 @@ const FormNewProduct = () => {
           placeholder="% de desconto"
         />
       </label>
-
       <button
         type="button"
         onClick={() => {
@@ -94,10 +108,8 @@ const FormNewProduct = () => {
       >
         ENVIAR
       </button>
-
       {err && <span className="error">Por favor, preencha os campos corretamente.</span>}
     </form>
   );
 };
-
 export default FormNewProduct;

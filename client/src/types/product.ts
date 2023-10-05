@@ -10,4 +10,8 @@ export type product = newProduct & {
   date: string,
 };
 
-
+export type productToClean = newProduct & {
+  price: { $numberDecimal: string },
+  id: string,
+  date: string
+}

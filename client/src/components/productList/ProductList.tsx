@@ -27,11 +27,11 @@ const ProductList = () => {
 
       {
           products.map(
-          ({ date,id, image, name, price, discountRate }: product) => 
-            <Product 
+          ({ date,id, image, name, price, discountRate }: product, i: number) => 
+            <Product
             date={date}
             id={id}
-            key={id}
+            key={i}
             name={name}
             price={price}
             discountRate={discountRate} 

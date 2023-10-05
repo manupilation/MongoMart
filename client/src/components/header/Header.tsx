@@ -1,4 +1,5 @@
 import SearchBar from "../searchBar/SearchBar";
+import MongoMartLogo from "../../../public/mongomart.png";
 import "./Header.css"
 
 const Header = () => {
@@ -6,7 +7,7 @@ const Header = () => {
     <div className="headerContainer">
       <header className="headerWrapper">
         <div className="logo">
-          <img src="" alt="Logo" />
+          <img src={MongoMartLogo} alt="Logo" />
         </div>
 
         <SearchBar/>

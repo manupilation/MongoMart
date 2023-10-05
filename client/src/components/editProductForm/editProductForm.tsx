@@ -2,11 +2,15 @@ import { useContext, useRef, useState } from "react";
 import { editProductContext } from "../../context/editProductContext";
 import useOutsideClickHandler from "../../hooks/UseCloseModal";
 import isFormValid from "../../helper/isFormValid";
-import useFetchPut from "../../hooks/UseFetchPut";
 import "./editProductForm.css";
+import { productToClean } from "../../types/product";
+import { globalContext } from "../../context/globalContext";
+
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function EditProductForm() {
   const { setIsEditing, productShape } = useContext(editProductContext);
+  const { setProducts } = useContext(globalContext);
   const {name, price, discountRate, image, date, id} = productShape;
   const [err, setErr] = useState(false);
 
@@ -27,15 +31,55 @@ function EditProductForm() {
 
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const { name, value } = event.target;
-    setEditProduct((prevProduct) => ({
-      ...prevProduct,
-      [name]: value,
-    }));
+    setEditProduct((prevProduct) => ({...prevProduct,[name]: value}));
   }
 
   async function handleEditProduct() {
-    await useFetchPut().request(editProduct);
+    const response = await (await fetch(backendUrl + "product", {
+      method: "PUT",
+      mode: "cors",
+      cache: "force-cache",
+      credentials: "omit",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: editProduct.id,
+        body: {
+          ...editProduct,
+          price: Number(`${editProduct.price}`.replace(",", ".")),
+          discountRate: Number(`${editProduct.discountRate}`.replace(",", ".")),
+        }
+      })
+    })).json() as {product: productToClean};
+    const clean = {...response.product, price: +response.product.price.$numberDecimal};
 
+    setProducts((prev) => {
+      const index = prev.findIndex(((item) => item.id === clean.id));
+      if(index !== -1) {
+        prev[index] = clean;
+      }
+      return [...prev];
+    });
+
+    setIsEditing(false);
+  }
+
+  async function handleDeleteProduct() {
+     await fetch(backendUrl + "product", {
+      method: "DELETE",
+      mode: "cors",
+      cache: "force-cache",
+      credentials: "omit",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        id: editProduct.id,
+        }
+      )
+    });
+    setProducts((prev) => [...prev].filter((a) => !(a.id === editProduct.id)));
     setIsEditing(false);
   }
 
@@ -46,7 +90,7 @@ function EditProductForm() {
           type="text"
           name="name"
           id="name"
-          value={name}
+          value={editProduct.name}
           onChange={handleChange}
           placeholder="Nome do produto"
         />
@@ -57,7 +101,7 @@ function EditProductForm() {
           type="text"
           name="price"
           id="price"
-          value={price === 0 ? "" : price}
+          value={editProduct.price === 0 ? "" : editProduct.price}
           onChange={handleChange}
           placeholder="Preço"
         />
@@ -68,7 +112,7 @@ function EditProductForm() {
           type="text"
           name="image"
           id="image"
-          value={image}
+          value={editProduct.image}
           onChange={handleChange}
           placeholder="URL da imagem do produto"
         />
@@ -79,22 +123,32 @@ function EditProductForm() {
           type="text"
           name="discountRate"
           id="discountRate"
-          value={discountRate === 0 ? "" : discountRate}
+          value={editProduct.discountRate === 0 ? "" : editProduct.discountRate}
           onChange={handleChange}
           placeholder="% de desconto"
         />
       </label>
 
-      <button
-        type="button"
-        className="editBtn"
-        onClick={() => {
-          isFormValid(editProduct) ?
-            handleEditProduct() : setErr(true);
-        }}
-      >
-        ENVIAR
-      </button>
+      <div className="manageButtons">
+        <button
+          type="button"
+          className="excludeButton"
+          onClick={() => handleDeleteProduct()}
+        >
+          EXCLUIR
+        </button>
+
+        <button
+          type="button"
+          className="editBtn"
+          onClick={() => {
+            isFormValid(editProduct) ?
+              handleEditProduct() : setErr(true);
+          }}
+        >
+          ENVIAR
+        </button>
+      </div>
       {err && <span className="error">Por favor, preencha os campos corretamente.</span>}
     </form>
   );

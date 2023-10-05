@@ -23,10 +23,11 @@ class App {
   }
 
   config() {
+
     this.app.use(express.json());
 
     this.app.use(cors({
-      methods: ['GET','POST','DELETE','UPDATE'],
+      methods: ['GET','POST','DELETE','PUT'],
       origin: "*"
     }));
   }

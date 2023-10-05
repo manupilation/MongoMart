@@ -1,0 +1,31 @@
+services:
+  database:
+    image: mongo:6.0
+    restart: always
+    ports:
+      - '27017:27017'
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: mongomart
+      MONGO_INITDB_ROOT_PASSWORD: senhafraquinha
+      MONGO_INITDB_DATABASE: MongoMart
+    healthcheck:
+      test: echo 'db.runCommand("ping").ok' | mongosh database:27017/test --quiet
+      timeout: 10s
+      retries: 3
+
+  back:
+    build: ./server
+    container_name: mongomart_API
+    depends_on:
+      database:
+        condition: service_healthy
+    restart: always
+    environment:
+      - MONGO_URI=MONGO_URI=mongodb://mongomart:senhafraquinha@database:27017/admin
+      - PORT=${PORT}
+    healthcheck:
+      test: [ "CMD", "lsof", "-t", "-i:3001" ]
+      timeout: 10s
+      retries: 5
+    ports:
+      - 3001:3001
