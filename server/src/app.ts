@@ -10,10 +10,12 @@ import specificErrorsThreatment from "./api/middlewares/specificErrors";
 class App {
   app: express.Application;
   PORT: number;
+  database: { connection(): Promise<void>; }
 
   constructor() {
     this.app = express();
     this.PORT = Number(consts.port);
+    this.database = database;
 
     this.config();
 
@@ -23,10 +25,11 @@ class App {
   }
 
   config() {
+
     this.app.use(express.json());
 
     this.app.use(cors({
-      methods: ['GET','POST','DELETE','UPDATE'],
+      methods: ['GET','POST','DELETE','PUT'],
       origin: "*"
     }));
   }
@@ -42,11 +45,13 @@ class App {
   }
 
   start() {
-    database.connection().catch((err) => console.error(err));
+    this.database.connection().catch((err) => console.error(err));
 
-    this.app.listen(this.PORT, () => {
+    const listen = this.app.listen(this.PORT, () => {
       console.log("App rodando liso na porta " + this.PORT);
     });
+
+    return listen;
   }
 }
 

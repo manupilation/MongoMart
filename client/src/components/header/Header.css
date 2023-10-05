@@ -1,0 +1,22 @@
+.headerContainer {
+  background-color: var(--col-bl);
+  margin-bottom: 5rem;
+
+  .headerWrapper {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 5rem;
+  }
+
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+
+    > img {
+      border-radius: 50px;
+    }
+  }
+}

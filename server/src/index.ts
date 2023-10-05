@@ -1,3 +1,5 @@
 import App from "./app";
 
-new App().start();
+const app = new App().start();
+
+export { app };

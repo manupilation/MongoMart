@@ -14,30 +14,37 @@ class ProductModel {
 
     return {
       ...obj,
+      id: obj._id,
       price: Number(create.price),
     };
   }
 
   async getProducts() {
-    const products = await this.productAccessDb.find().limit(5);
+    const products = await this.productAccessDb.find().limit(15);
 
     return products;
   }
 
   async getProduct(id: string) {
-    const product = await this.productAccessDb.findOne({id: id});
+    const product = await this.productAccessDb.findOne({_id: id});
 
     return product;
   }
 
   async updateProduct(product: updateProduct) {
-    const updateProduct = await this.productAccessDb.findOneAndUpdate({ id: product.id }, { ...product.body }, {new: true});
+    const updateProduct = await this.productAccessDb.findOneAndUpdate({ _id: product.id }, { ...product.body }, {new: true});
 
-    return updateProduct;
+    return {
+      id: updateProduct._id,
+      name: updateProduct.name,
+      price: updateProduct.price,
+      image: updateProduct.image,
+      discountRate: updateProduct.discountRate,
+    };
   }
 
   async deleteProduct(id: string) {
-    await this.productAccessDb.findOneAndDelete({id});
+    await this.productAccessDb.findOneAndDelete({_id: id});
 
     return "ok";
   }

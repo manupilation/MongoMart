@@ -1,0 +1,41 @@
+.newProductForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  > label > input {
+    margin-left: 1rem;
+    padding: .6rem 1.2rem;
+    border: .25rem;
+    border-radius: 1rem;
+    width: 60%;
+    font-size: 1rem;
+    font-family: monospace;
+
+    &:focus {
+      outline:  2px solid #555;
+    }
+  }
+
+  > button {
+    cursor: pointer;
+    place-self: center;
+    padding: .6rem 1.2rem;
+    border: .15rem solid #333;
+    border-radius: 50px;
+    background-color: var(--col-gr);
+    color: #FFF;
+    font: 600 .9rem monospace;
+  }
+
+  .error {
+    cursor: default;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    font-family: monospace;
+    color: var(--col-rd);
+    background-color: yellow;
+    font-weight: 600;
+  }
+}

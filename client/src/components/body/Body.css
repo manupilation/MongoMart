@@ -1,0 +1,11 @@
+.bodyWrapper {
+  margin: 0 5rem;
+  position: relative;
+
+  > h1 {
+    font-size: 2rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+}
