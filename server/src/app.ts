@@ -6,6 +6,7 @@ import cors from "cors";
 import productRoute from "./api/routes/ProductRoute";
 import "express-async-errors";
 import specificErrorsThreatment from "./api/middlewares/specificErrors";
+import acquireProductRoute from "./api/routes/AcquiredProductRoute";
 
 class App {
   app: express.Application;
@@ -37,6 +38,7 @@ class App {
 
   activeRoutes() {
     this.app.use(productRoute);
+    this.app.use(acquireProductRoute);
   }
 
   errorMiddlewars() {
