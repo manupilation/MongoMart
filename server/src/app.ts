@@ -47,7 +47,7 @@ class App {
   start() {
     this.database.connection().catch((err) => console.error(err));
 
-    const listen = this.app.listen(this.PORT, () => {
+    const listen = this.app.listen(Number(this.PORT), () => {
       console.log("App rodando liso na porta " + this.PORT);
     });
 
