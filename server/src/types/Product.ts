@@ -63,4 +63,14 @@ export type RequestWithBody = Request & {
   headers: Headers & {authorization: string},
 };
 
+export type AcquiredProduct = {
+  user: string,
+  products: [
+    id: string,
+    name: string,
+    quantity: number,
+    price: string,
+  ],
+}
+
 export default product;
