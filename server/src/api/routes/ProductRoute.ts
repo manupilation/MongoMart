@@ -19,6 +19,18 @@ productRoute.get("/product/:id", (req: Request<any>, res: Response<any>, _: Next
   return productController.getProduct(req, res, _);
 });
 
+productRoute.get("/ml/product/:name", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.getMlProducts(req, res, _);
+});
+
+productRoute.get("/ml/product/item/:id", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.getMlProductById(req, res, _);
+});
+
+productRoute.get("/ml/categories", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.getMlCategories(req, res, _);
+})
+
 productRoute.put("/product", productUpdateValidation, (req: Request<any>, res: Response<any>, _: NextFunction) => {
   return productController.updateProduct(req, res, _);
 });
