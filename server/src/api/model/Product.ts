@@ -40,6 +40,11 @@ export class Products {
     return products.data.results;
   }
 
+  async getProductsByCategory(name: string) {
+    const products: AxiosResponse<{results: Array<MlProduct>}> = await axios.get(consts.productsByCategory + name);
+    return products.data.results;
+  }
+
   async getProductById(id: string) {
     const product: AxiosResponse<MlProduct> = await axios.get(consts.productById + id);
 

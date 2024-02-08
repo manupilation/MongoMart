@@ -23,6 +23,10 @@ productRoute.get("/ml/product/:name", (req: Request<any>, res: Response<any>, _:
   return productController.getMlProducts(req, res, _);
 });
 
+productRoute.get("/ml/product/category/:name", (req: Request<any>, res: Response<any>, _: NextFunction) => {
+  return productController.getMlProductsByCategory(req, res, _);
+});
+
 productRoute.get("/ml/product/item/:id", (req: Request<any>, res: Response<any>, _: NextFunction) => {
   return productController.getMlProductById(req, res, _);
 });
