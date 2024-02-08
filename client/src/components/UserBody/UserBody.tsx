@@ -4,14 +4,21 @@ import { globalContext } from "../../context/globalContext";
 import { url } from "../../config/url";
 
 const UserBody = () => {
-  const {setUserProducts} = useContext(globalContext);
+  const {setUserProducts, setCategories} = useContext(globalContext);
   
   useEffect(() => {
     async function fetchProducts() {
-      const data = await fetch(url.backend + "ml/product/tecnologia");
-      const {products} = await data.json();
+      const [fetchProducts, fetchCategories] = await Promise.all([
+        fetch(url.backend + "ml/product/tecnologia"),
+        fetch(url.backend + "ml/categories"),
+      ]);
+      const [{products}, {categories}] = await Promise.all([
+        fetchProducts.json(),
+        fetchCategories.json(),
+      ])
       
       setUserProducts(products);
+      setCategories(categories);
     }
 
     fetchProducts();

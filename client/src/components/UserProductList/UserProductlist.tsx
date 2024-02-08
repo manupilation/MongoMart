@@ -9,7 +9,7 @@ const UserProductList = () => {
   return (
     <div className="productListWrapper">
       {
-        userProducts.length && userProducts.map(
+        userProducts.length ? userProducts.map(
           ({ id, thumbnail, title, price, shipping, original_price, installments }, i) => 
             <UserProduct
             shipping={shipping}
@@ -20,7 +20,7 @@ const UserProductList = () => {
             price={price}
             installments={installments}
             original_price={original_price} />
-        )
+        ) : null
       }
     </div>
   );

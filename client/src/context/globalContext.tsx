@@ -1,5 +1,5 @@
 import React, { createContext, ReactNode, useState } from "react";
-import { product, UserProduct } from "../types/product";
+import { category, product, UserProduct } from "../types/product";
 
 type GlobalContextTypes = {
   products: product[],
@@ -7,11 +7,13 @@ type GlobalContextTypes = {
   isCreating: boolean,
   isEditing: boolean,
   isUser: boolean,
+  categories: category[],
   setProducts: React.Dispatch<React.SetStateAction<product[]>>,
   setUserProducts: React.Dispatch<React.SetStateAction<UserProduct[]>>,
   setIsEditing: React.Dispatch<React.SetStateAction<boolean>>,
   setIsCreating: React.Dispatch<React.SetStateAction<boolean>>,
   setIsUser: React.Dispatch<React.SetStateAction<boolean>>,
+  setCategories: React.Dispatch<React.SetStateAction<category[]>>,
 }
 
 type GlobalProps = {
@@ -26,6 +28,7 @@ const GlobalContext = (props: GlobalProps) => {
   const [products, setProducts] = useState<product[]>([]);
   const [userProducts, setUserProducts] = useState<UserProduct[]>([]);
   const [isUser, setIsUser] = useState<boolean>(true);
+  const [categories, setCategories] = useState<category[]>([]);
 
   const globalValue = {
     products,
@@ -33,11 +36,13 @@ const GlobalContext = (props: GlobalProps) => {
     isCreating,
     isUser,
     userProducts,
+    categories,
     setProducts,
     setIsCreating,
     setIsEditing,
     setIsUser,
     setUserProducts,
+    setCategories
   }
 
   return (

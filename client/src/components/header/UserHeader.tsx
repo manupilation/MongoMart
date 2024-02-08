@@ -1,7 +1,11 @@
-import categories from "../../db/categories.json";
+import { useContext } from "react";
+// import categories from "../../db/categories.json";
 import HeaderCategory from "./HeaderCategories";
+import { globalContext } from "../../context/globalContext";
 
 const UserHeader = () => {
+  const {categories} = useContext(globalContext);
+
   return (
     <div className="">
       <nav>
@@ -16,13 +20,14 @@ const UserHeader = () => {
         Categorias
         <ul>
           {
-            new Array(...categories).map(
-              ({ id, name }, i) => 
-              <HeaderCategory 
-                id={id}
-                key={i}
-                name={name} />
-            )
+            categories.length ? categories.map(
+                ({ id, name }, i) => 
+                <HeaderCategory 
+                  id={id}
+                  key={i}
+                  name={name} />
+              ) :
+              null
           }
         </ul>
       </div>
