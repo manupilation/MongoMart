@@ -1,16 +1,15 @@
 import { useContext } from "react";
 import { globalContext } from "../../context/globalContext";
-import data from "../../db/product.json";
+// import data from "../../db/product.json";
 import UserProduct from "../UserProduct/UserProduct";
 
 const UserProductList = () => {
-  // const {products} = useContext(globalContext);
+  const {userProducts} = useContext(globalContext);
 
-  if(data)
   return (
     <div className="productListWrapper">
       {
-        new Array(...data).map(
+        userProducts.length && userProducts.map(
           ({ id, thumbnail, title, price, shipping, original_price, installments }, i) => 
             <UserProduct
             shipping={shipping}
