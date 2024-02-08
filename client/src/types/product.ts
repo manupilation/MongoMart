@@ -55,6 +55,11 @@ export type UserProduct = {
   inventory_id: string | null;
 };
 
+export type category = {
+  name: string,
+  id: string,
+}
+
 export type productToClean = newProduct & {
   price: { $numberDecimal: string },
   id: string,
