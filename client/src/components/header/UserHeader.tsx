@@ -21,7 +21,7 @@ const UserHeader = () => {
     setUserProducts(products);
   }
 
-  function handleCategoriesOcult(event: React.MouseEvent<HTMLElement, MouseEvent>) {
+  function handleCategoriesOcult(_event: React.MouseEvent<HTMLElement, MouseEvent>) {
     const categoriesOcult = document.querySelector('.categories');
     if (categoriesOcult)
     categoriesOcult.classList.toggle('visible');
