@@ -6,9 +6,23 @@ import { useParams } from "react-router-dom";
 
 const UserBody = () => {
   const {setUserProducts, setCategories} = useContext(globalContext);
-  const {product} = useParams();
+  const {product, category} = useParams();
   
   useEffect(() => {
+    async function fetchProductsByCategory() {
+      const [fetchProducts, fetchCategories] = await Promise.all([
+        fetch(url.backend + `ml/product/category/${category}`),
+        fetch(url.backend + "ml/categories"),
+      ]);
+      const [{products}, {categories}] = await Promise.all([
+        fetchProducts.json(),
+        fetchCategories.json(),
+      ])
+      
+      setUserProducts(products);
+      setCategories(categories);
+    }
+
     async function fetchProducts() {
       const [fetchProducts, fetchCategories] = await Promise.all([
         fetch(url.backend + `ml/product/${product || "tecnologia"}`),
@@ -23,6 +37,10 @@ const UserBody = () => {
       setCategories(categories);
     }
 
+    if(category) {
+      fetchProductsByCategory();
+      return; 
+    }
     fetchProducts();
   }, [setUserProducts, product]);
 

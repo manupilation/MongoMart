@@ -1,23 +1,17 @@
-import { useContext } from "react";
 import { category } from "../../types/product";
-import { globalContext } from "../../context/globalContext";
-import { url } from "../../config/url";
+import { useNavigate } from "react-router-dom";
 
 const HeaderCategory = (props: category) => {
   const {id, name} = props;
-  const {setUserProducts} = useContext(globalContext);
+  const navigate = useNavigate();
 
-  const handleSearchByCategory = async (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => {
-    event.preventDefault();
-    const fetchProducts = await fetch(url.backend + `ml/product/category/${id}`);
-    const {products} = await fetchProducts.json();
-    
-    setUserProducts([]);
-    setUserProducts(products);
-  }
+
+  function handleClickProduct() {
+    return navigate(`/list/${id}`);
+  };
 
   return (
-    <li onClick={(event) => handleSearchByCategory(event)}>
+    <li onClick={handleClickProduct}>
       <a>{name}</a>
     </li>
   );

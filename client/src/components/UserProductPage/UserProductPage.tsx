@@ -12,7 +12,6 @@ const UserProductPage = () => {
     async function fetchProduct() {
       const getProductResponse = await fetch(url.backend + `ml/product/item/${id}`);
       const {product} = await getProductResponse.json();
-      console.log(product);
 
       setProduct(product);
     }
