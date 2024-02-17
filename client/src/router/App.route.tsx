@@ -35,6 +35,7 @@ const AppRoute = () => {
       {isUser ? <UserHeader /> : <Header/>}
       <Routes >
         <Route path="/" element={isUser ? <UserApp /> : <AdmApp />} />
+        <Route path="/search/:product" element={<UserApp />} />
         <Route path="/product/:id" element={<UserProductPage />}/>
       </Routes>
     </BrowserRouter>

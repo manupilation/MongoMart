@@ -2,23 +2,17 @@ import { useContext, useState } from "react";
 // import categories from "../../db/categories.json";
 import HeaderCategory from "./HeaderCategories";
 import { globalContext } from "../../context/globalContext";
-import { url } from "../../config/url";
+import { Link, useNavigate } from "react-router-dom";
+import lupa from "../../assets/lupa.svg";
 import "./UserHeader.css";
 
 const UserHeader = () => {
-  const {categories, setUserProducts} = useContext(globalContext);
+  const {categories} = useContext(globalContext);
   const [search, setSearch] = useState("");
+  const navigateTo = useNavigate();
 
   function handleSearchBar(event: React.ChangeEvent<HTMLInputElement>) {
     setSearch(event.target.value);
-  }
-
-  async function searchProducts(event: React.FormEvent<HTMLButtonElement>) {
-    event.preventDefault();
-    const fetchProducts = await fetch(url.backend + `ml/product/${search}`);
-    const {products} = await fetchProducts.json();
-    
-    setUserProducts(products);
   }
 
   function handleCategoriesOcult(_event: React.MouseEvent<HTMLElement, MouseEvent>) {
@@ -27,11 +21,15 @@ const UserHeader = () => {
     categoriesOcult.classList.toggle('visible');
   }
 
+  function redirectToMain() {
+    navigateTo("/");
+  };
+
   return (
-    <div className="">
+    <div className="header-container">
       <nav>
-        <img src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.15/mercadolibre/pt_logo_large_plus.webp"/>
-        <div>
+        <img className="logo" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.15/mercadolibre/pt_logo_large_plus.webp" onClick={redirectToMain}/>
+        <div className="searchInput">
           <input
             type="text"
             name="searchBar"
@@ -40,27 +38,29 @@ const UserHeader = () => {
             value={search}
             onChange={handleSearchBar}
           />
-          <button type="submit" onClick={searchProducts}>AAA</button>
+          <Link to={"search/" + search} className="searchBtn"><img src={lupa}/></Link>
         </div>
-        <img src="https://http2.mlstatic.com/D_NQ_717994-MLA73780157152_012024-OO.webp" alt="" />
+        <img src="https://http2.mlstatic.com/D_NQ_856833-MLA74547382581_022024-OO.webp" alt="" className="banner"/>
       </nav>
 
-      <div className="">
-        <nav onClick={handleCategoriesOcult}>
+      <span className="separator"></span>
+
+      <div className="options-container">
+        <nav onClick={handleCategoriesOcult} className="categories-list">
           Categorias
+          <ul className="categories">
+            {
+              categories.length ? categories.map(
+                  ({ id, name }, i) => 
+                  <HeaderCategory 
+                    id={id}
+                    key={i}
+                    name={name} />
+                ) :
+                null
+            }
+          </ul>
         </nav>
-        <ul className="categories">
-          {
-            categories.length ? categories.map(
-                ({ id, name }, i) => 
-                <HeaderCategory 
-                  id={id}
-                  key={i}
-                  name={name} />
-              ) :
-              null
-          }
-        </ul>
       </div>
     </div>
   );

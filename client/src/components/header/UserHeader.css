@@ -1,7 +1,110 @@
-.categories {
-  display: none;
-}
+.header-container {
+  background-color: #FFE600;
+  padding: 16px 60px 0 60px;
 
-.categories.visible {
-  display: block;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    .logo {
+      cursor: pointer;
+    }
+
+    .searchInput {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;  
+        #searchBar, .searchBtn {
+          border: none;
+          background-color: #FFF;
+          font-size: 16px;
+          box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+        }
+  
+        #searchBar {
+          padding: 10px 60px 10px 15px;
+          border-radius: 4px 0 0 4px;
+          width: 60%;
+
+          &:focus {
+            outline: none;
+          }
+        }
+      
+        .searchBtn {
+          cursor: pointer;
+          border-radius: 0 4px 4px 0;
+          padding: 10px;
+          position: relative;
+
+          &::before {
+            content: "";
+            display: block;
+            height: 26px;
+            border-left: 1px solid #a6a6a6;
+            position: absolute;
+            top: 6.5px;
+            right: 36px;
+          }
+
+          img {
+            width: 16px;
+            height: 21px;
+          }
+        }
+    }
+  
+    .banner {
+      max-width: 340px;
+      max-height: 39px;
+      flex-grow: 1;
+    }
+  }
+
+  .options-container {
+    padding: 16px 0;
+    display: flex;
+
+    .categories-list {
+      display: flex;
+      gap: 2px;
+      position: relative;
+
+      .categories {
+        display: none;
+        position: absolute;
+        width: 300px;
+        background-color: #333333;
+        top: 20px;
+        left: 75px;
+        z-index: 999;
+        padding: 30px 0;
+        border-radius: 8px;
+
+        &.visible {
+          display: block;
+        }
+
+        li {
+          cursor: pointer;
+          color: #F2EFFE;
+          width: 100%;
+          padding: 20px 40px;
+
+          &:hover {
+            background-color: #3483FA;
+          }
+        }
+      }
+
+      &::after {
+        content: ">";
+        transform: rotate(90deg);
+        width: 6px;
+        color: rgba(0, 0, 0, 0.5);
+        margin-left: 2px;
+      }
+    }
+  }
 }
