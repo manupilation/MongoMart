@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { globalContext } from "../../context/globalContext";
 // import data from "../../db/product.json";
 import UserProduct from "../UserProduct/UserProduct";
+import "./UserProduct.css";
 
 const UserProductList = () => {
   const {userProducts} = useContext(globalContext);

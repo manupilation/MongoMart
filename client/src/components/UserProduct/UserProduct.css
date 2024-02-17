@@ -1,0 +1,28 @@
+.userProduct {
+  cursor: pointer;
+  width: 150px;
+  height: 333.3px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  .portata {
+    width: 150px;
+    height: 150px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .productPriceSection {
+    .productTitle {
+      max-height: 35px;
+      font-size: .9rem;
+      font-family: Proxima Nova;
+    }
+  }
+}
+
+.userProduct:hover .productTitle {
+  color: #3583FA;
+}

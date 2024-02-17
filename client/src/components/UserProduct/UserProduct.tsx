@@ -1,5 +1,6 @@
 import { useNavigate  } from "react-router-dom";
 import { UserProduct as UserProductType } from "../../types/product";
+import "./UserProduct.css";
 
 const UserProduct = (props: Partial<UserProductType>) => {
   const {price, thumbnail, title, shipping, original_price, installments, id } = props;
@@ -17,15 +18,20 @@ const UserProduct = (props: Partial<UserProductType>) => {
   function handleClickProduct() {
     return navigate(`/product/${id}`);
   };
+
+  function calcTitleLength(title: string | undefined) {
+    if(title)
+    return title.length > 35 ? title.substring(0, 35) + "..." : title;
+  }
   
   return (
-    <div className={``} onClick={() => handleClickProduct()}>
-      <div className="">
+    <div className={`userProduct`} onClick={() => handleClickProduct()}>
+      <div className="portata">
         <img src={thumbnail} alt="Product" />
       </div>
 
       <section className="productPriceSection">
-        <h5>{title}</h5>  
+        <h5 className="productTitle">{calcTitleLength(title)}</h5>  
         {original_price && <p className="productOriginalPrice">{`R$${original_price?.toFixed(2).replace(".", ",")}`}</p>}
         <div>
           <h3 className="price">{`R$ ${price}`}</h3>

@@ -3,6 +3,7 @@ import UserProductList from "../UserProductList/UserProductlist";
 import { globalContext } from "../../context/globalContext";
 import { url } from "../../config/url";
 import { useParams } from "react-router-dom";
+import "./UserBody.css";
 
 const UserBody = () => {
   const {setUserProducts, setCategories} = useContext(globalContext);
@@ -46,7 +47,7 @@ const UserBody = () => {
 
   return (
     <div className="bodyWrapper">
-      <h3>Mais vendidos da semana</h3>
+      <h3 className="categorytitle">Mais vendidos da semana</h3>
 
       <UserProductList />
     </div>
