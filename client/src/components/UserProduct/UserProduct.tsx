@@ -33,7 +33,7 @@ const UserProduct = (props: Partial<UserProductType>) => {
           <h5>
             {
               installments 
-              ? `em ${installments.quantity} vezes de R$${installments.amount} ${!installments.rate ? "sem juros" : ""}` 
+              ? `em ${installments.quantity} vezes de R$ ${installments.amount} ${!installments.rate ? "sem juros" : ""}` 
               : null}</h5>
         </div>
 

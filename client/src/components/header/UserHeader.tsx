@@ -15,7 +15,7 @@ const UserHeader = () => {
     setSearch(event.target.value);
   }
 
-  function handleCategoriesOcult(_event: React.MouseEvent<HTMLElement, MouseEvent>) {
+  function handleCategoriesOcult() {
     const categoriesOcult = document.querySelector('.categories');
     if (categoriesOcult)
     categoriesOcult.classList.toggle('visible');
