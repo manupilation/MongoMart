@@ -43,10 +43,10 @@ const UserBody = () => {
       return; 
     }
     fetchProducts();
-  }, [setUserProducts, product]);
+  }, [setUserProducts, product, category]);
 
   return (
-    <div className="bodyWrapper">
+    <div className="userBodyWrapper">
       <h3 className="categorytitle">Mais vendidos da semana</h3>
 
       <UserProductList />

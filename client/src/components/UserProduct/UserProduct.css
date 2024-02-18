@@ -1,7 +1,7 @@
 .userProduct {
   cursor: pointer;
   width: 150px;
-  height: 333.3px;
+  height: 350px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
   .portata {
@@ -19,6 +19,51 @@
       max-height: 35px;
       font-size: .9rem;
       font-family: Proxima Nova;
+      margin-top: 1rem;
+    }
+
+    .productOriginalPrice {
+      margin-top: 1rem;
+      text-decoration: line-through;
+      font-size: 12px;
+      color: rgba(0,0,0,.55);
+    }
+
+    .currentPriceContainer {
+      margin-top: .5rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      
+      .price{
+        display: flex;
+        font-family: "Poppins";
+        font-size: 22px;
+        color: black;
+        .cents {
+          font-size: 10px;
+        }
+      }
+
+      .discountRate {
+        font-size: 14px;
+        color: #00A650;
+      }
+    }
+
+    .promotion {
+      margin-top: 1rem;
+      font-size: 14px;
+      color: #00A650;
+    }
+
+    .shipping {
+      color: #00A650;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 18px;
+      margin: 8px 0 4px;
+      width: 100%;
     }
   }
 }

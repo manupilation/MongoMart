@@ -11,7 +11,7 @@ const UserProduct = (props: Partial<UserProductType>) => {
       const discountAmount = price - original_price;
       const discountRate = (discountAmount / original_price) * 100;
   
-      return Math.abs(discountRate).toFixed(2);
+      return Math.round(Math.abs(discountRate));
     }
   }
 
@@ -21,7 +21,21 @@ const UserProduct = (props: Partial<UserProductType>) => {
 
   function calcTitleLength(title: string | undefined) {
     if(title)
-    return title.length > 35 ? title.substring(0, 35) + "..." : title;
+    return title.length > 40 ? title.substring(0, 40) + "..." : title;
+  }
+
+  function clearPrice(price: number | undefined | null) {
+    if(price)
+    return price.toFixed(2).replace(".", ",");
+  }
+
+  function mountPrice(price: number | undefined) {
+    if (price) {
+      const [amount, cents] = price.toFixed(2).split(".");
+      return (
+        <h3 className="price">R$ {amount} <span className="cents">{cents === "00" ? cents : null}</span></h3>
+      );
+    }
   }
   
   return (
@@ -32,18 +46,20 @@ const UserProduct = (props: Partial<UserProductType>) => {
 
       <section className="productPriceSection">
         <h5 className="productTitle">{calcTitleLength(title)}</h5>  
-        {original_price && <p className="productOriginalPrice">{`R$${original_price?.toFixed(2).replace(".", ",")}`}</p>}
+        {original_price && <p className="productOriginalPrice">{`R$${clearPrice(original_price)}`}</p>}
         <div>
-          <h3 className="price">{`R$ ${price}`}</h3>
-          <h5 className="discountRate">{price && original_price  ? `${calcDiscountRate()}% OFF` : null}</h5>
-          <h5>
+          <div className="currentPriceContainer">
+            {mountPrice(price)}
+            <h5 className="discountRate">{price && original_price  ? `${calcDiscountRate()}% OFF` : null}</h5>
+          </div>
+          <h5 className="promotion">
             {
               installments 
-              ? `em ${installments.quantity} vezes de R$ ${installments.amount} ${!installments.rate ? "sem juros" : ""}` 
+              ? `em ${installments.quantity} vezes de R$ ${clearPrice(installments.amount)} ${!installments.rate ? "sem juros" : ""}` 
               : null}</h5>
         </div>
 
-        <div>
+        <div className="shipping">
           {shipping?.free_shipping ? <p>Frete grátis</p> : null}
         </div>
       </section>
