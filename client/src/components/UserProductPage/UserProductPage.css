@@ -1,0 +1,39 @@
+.productPage {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  background-color: #FFF;
+  gap: 40px;
+  margin: 2rem auto;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 60%;
+  box-sizing: border-box;
+
+  .portata {
+    width: 200px;
+  }
+
+  .productContent {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .priceContainer {
+      display: flex;
+      flex-direction: column;
+
+      .discountRate {
+        color: #00A650;
+      }
+    }
+
+    .addCart {
+      place-self: end;
+      padding: .7rem .8rem;
+      background-color: #2968C8;
+      color: #FFF;
+      border: none;
+      border-radius: 8px;
+    }
+  }
+}

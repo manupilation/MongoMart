@@ -1,0 +1,8 @@
+.cart {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #FFF;
+  margin: 2rem;
+  border-radius: 12px;
+  padding: 1rem;
+}

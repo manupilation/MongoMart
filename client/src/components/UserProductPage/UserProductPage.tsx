@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { url } from "../../config/url";
 import { UserProduct } from "../../types/product";
 import { globalContext } from "../../context/globalContext";
+import "./UserProductPage.css";
 
 const UserProductPage = () => {
   const {id} = useParams();
@@ -47,21 +48,23 @@ const UserProductPage = () => {
   
   if(userProduct && userProduct.id)
   return (
-    <div>
-      <div>
+    <div className="userProduct productPage">
+      <div className="portata">
         <img src={userProduct.thumbnail} alt="Product" />
       </div>
-      <div>
+      <div className="productContent">
         <h1>{userProduct.title}</h1>
-        <div>
-          <h3>R$ {userProduct.price}</h3>
-          <h5 className="discountRate">
-            {
-              userProduct.price && userProduct.original_price  
-              ? `${calcDiscountRate(userProduct.price, userProduct.original_price)}% OFF` 
-              : null
-            }
-          </h5>
+        <div className="priceContainer">
+          <div>
+            <h3 className="price">R$ {userProduct.price}</h3>
+            <h5 className="discountRate">
+              {
+                userProduct.price && userProduct.original_price  
+                ? `${calcDiscountRate(userProduct.price, userProduct.original_price)}% OFF` 
+                : null
+              }
+            </h5>
+          </div>
           <h5>
             {
               userProduct.installments 
@@ -70,7 +73,7 @@ const UserProductPage = () => {
             }
           </h5>
 
-          <button onClick={addToCart}>ADICIONAR AO CARRINHO</button>
+          <button className="addCart" onClick={addToCart}>ADICIONAR AO CARRINHO</button>
         </div>
       </div>
 

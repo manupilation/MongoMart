@@ -48,7 +48,6 @@ const UserBody = () => {
   return (
     <div className="userBodyWrapper">
       <h3 className="categorytitle">Mais vendidos da semana</h3>
-
       <UserProductList />
     </div>
   );

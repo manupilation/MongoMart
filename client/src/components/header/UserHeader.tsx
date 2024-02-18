@@ -4,10 +4,11 @@ import HeaderCategory from "./HeaderCategories";
 import { globalContext } from "../../context/globalContext";
 import { Link, useNavigate } from "react-router-dom";
 import lupa from "../../assets/lupa.svg";
+import cart from "../../assets/cart.png";
 import "./UserHeader.css";
 
 const UserHeader = () => {
-  const {categories} = useContext(globalContext);
+  const {categories, cartItens} = useContext(globalContext);
   const [search, setSearch] = useState("");
   const navigateTo = useNavigate();
 
@@ -21,14 +22,19 @@ const UserHeader = () => {
     categoriesOcult.classList.toggle('visible');
   }
 
-  function redirectToMain() {
+  function redirectToMain(url?: string) {
+    if(url) {
+      navigateTo("/" + url);
+      return
+    }
+
     navigateTo("/");
   };
 
   return (
     <div className="header-container">
       <nav>
-        <img className="logo" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.15/mercadolibre/pt_logo_large_plus.webp" onClick={redirectToMain}/>
+        <img className="logo" src="https://http2.mlstatic.com/frontend-assets/ml-web-navigation/ui-navigation/6.6.15/mercadolibre/pt_logo_large_plus.webp" onClick={() => redirectToMain()}/>
         <div className="searchInput">
           <input
             type="text"
@@ -61,6 +67,11 @@ const UserHeader = () => {
             }
           </ul>
         </nav>
+
+        <div className="cartContainer" onClick={() => redirectToMain("cart")}>
+          <img src={cart} alt="" className="cartIcon"/>
+          <span className="cartLength">{cartItens.length}</span>
+        </div>
       </div>
     </div>
   );
