@@ -1,0 +1,17 @@
+.purchase-confirmation-screen {
+  margin: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 8px;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  img {
+    max-width: 200px;
+  }
+}

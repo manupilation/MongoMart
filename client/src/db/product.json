@@ -1,0 +1,1411 @@
+[
+  {
+    "id": "MLB2907929947",
+    "title": "Água Sanitária Cloro Ativo 5 Litros Ypê",
+    "condition": "new",
+    "thumbnail_id": "714071-MLU70350639958_072023",
+    "catalog_product_id": "MLB19745649",
+    "listing_type_id": "gold_special",
+    "permalink": "https://www.mercadolivre.com.br/agua-sanitaria-cloro-ativo-5-litros-yp/p/MLB19745649",
+    "buying_mode": "buy_it_now",
+    "site_id": "MLB",
+    "category_id": "MLB191460",
+    "domain_id": "MLB-BLEACHES",
+    "thumbnail": "http://http2.mlstatic.com/D_714071-MLU70350639958_072023-I.jpg",
+    "currency_id": "BRL",
+    "order_backend": 1,
+    "price": 13,
+    "original_price": 13.19,
+    "sale_price": null,
+    "available_quantity": 500,
+    "official_store_id": 4996,
+    "official_store_name": "Carrefour Mercado",
+    "use_thumbnail_id": true,
+    "accepts_mercadopago": true,
+    "shipping": {
+      "store_pick_up": false,
+      "free_shipping": false,
+      "logistic_type": "fulfillment",
+      "mode": "me2",
+      "tags": [
+        "fulfillment"
+      ],
+      "benefits": null,
+      "promise": null
+    },
+    "stop_time": "2042-10-26T04:00:00.000Z",
+    "seller": {
+      "id": 1188362425,
+      "nickname": "CARREFOUR MERCADO"
+    },
+    "attributes": [
+      {
+        "id": "BRAND",
+        "name": "Marca",
+        "value_id": "8974802",
+        "value_name": "Ypê",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "8974802",
+            "name": "Ypê",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condição do item",
+        "value_id": "2230284",
+        "value_name": "Novo",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Novo",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "LINE",
+        "name": "Linha",
+        "value_id": "13408338",
+        "value_name": "Água Sanitária e Alvejante",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "13408338",
+            "name": "Água Sanitária e Alvejante",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "MODEL",
+        "name": "Modelo",
+        "value_id": null,
+        "value_name": "5L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": null,
+            "name": "5L",
+            "struct": null,
+            "source": 8139005603237814
+          }
+        ],
+        "source": 8139005603237814,
+        "value_type": "string"
+      },
+      {
+        "id": "PACKAGE_LENGTH",
+        "name": "Comprimento da embalagem",
+        "value_id": null,
+        "value_name": "16.4 cm",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 16.4,
+          "unit": "cm"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "16.4 cm",
+            "struct": {
+              "number": 16.4,
+              "unit": "cm"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "PACKAGE_WEIGHT",
+        "name": "Peso da embalagem",
+        "value_id": null,
+        "value_name": "5450 g",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5450,
+          "unit": "g"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "5450 g",
+            "struct": {
+              "unit": "g",
+              "number": 5450
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "SALE_FORMAT",
+        "name": "Formato de venda",
+        "value_id": "1359391",
+        "value_name": "Unidade",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "1359391",
+            "name": "Unidade",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "UNITS_PER_PACK",
+        "name": "Unidades por kit",
+        "value_id": "2726554",
+        "value_name": "1",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2726554",
+            "name": "1",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number"
+      },
+      {
+        "id": "UNIT_VOLUME",
+        "name": "Volume da unidade",
+        "value_id": "4668120",
+        "value_name": "5 L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5,
+          "unit": "L"
+        },
+        "values": [
+          {
+            "id": "4668120",
+            "name": "5 L",
+            "struct": {
+              "unit": "L",
+              "number": 5
+            },
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number_unit"
+      }
+    ],
+    "installments": null,
+    "winner_item_id": null,
+    "catalog_listing": true,
+    "discounts": null,
+    "promotions": [
+    ],
+    "inventory_id": "DYTK43748"
+  },
+  {
+    "id": "MLB2907929947",
+    "title": "Água Sanitária Cloro Ativo 5 Litros Ypê",
+    "condition": "new",
+    "thumbnail_id": "714071-MLU70350639958_072023",
+    "catalog_product_id": "MLB19745649",
+    "listing_type_id": "gold_special",
+    "permalink": "https://www.mercadolivre.com.br/agua-sanitaria-cloro-ativo-5-litros-yp/p/MLB19745649",
+    "buying_mode": "buy_it_now",
+    "site_id": "MLB",
+    "category_id": "MLB191460",
+    "domain_id": "MLB-BLEACHES",
+    "thumbnail": "http://http2.mlstatic.com/D_714071-MLU70350639958_072023-I.jpg",
+    "currency_id": "BRL",
+    "order_backend": 1,
+    "price": 13,
+    "original_price": 13.19,
+    "sale_price": null,
+    "available_quantity": 500,
+    "official_store_id": 4996,
+    "official_store_name": "Carrefour Mercado",
+    "use_thumbnail_id": true,
+    "accepts_mercadopago": true,
+    "shipping": {
+      "store_pick_up": false,
+      "free_shipping": false,
+      "logistic_type": "fulfillment",
+      "mode": "me2",
+      "tags": [
+        "fulfillment"
+      ],
+      "benefits": null,
+      "promise": null
+    },
+    "stop_time": "2042-10-26T04:00:00.000Z",
+    "seller": {
+      "id": 1188362425,
+      "nickname": "CARREFOUR MERCADO"
+    },
+    "attributes": [
+      {
+        "id": "BRAND",
+        "name": "Marca",
+        "value_id": "8974802",
+        "value_name": "Ypê",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "8974802",
+            "name": "Ypê",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condição do item",
+        "value_id": "2230284",
+        "value_name": "Novo",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Novo",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "LINE",
+        "name": "Linha",
+        "value_id": "13408338",
+        "value_name": "Água Sanitária e Alvejante",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "13408338",
+            "name": "Água Sanitária e Alvejante",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "MODEL",
+        "name": "Modelo",
+        "value_id": null,
+        "value_name": "5L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": null,
+            "name": "5L",
+            "struct": null,
+            "source": 8139005603237814
+          }
+        ],
+        "source": 8139005603237814,
+        "value_type": "string"
+      },
+      {
+        "id": "PACKAGE_LENGTH",
+        "name": "Comprimento da embalagem",
+        "value_id": null,
+        "value_name": "16.4 cm",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 16.4,
+          "unit": "cm"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "16.4 cm",
+            "struct": {
+              "number": 16.4,
+              "unit": "cm"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "PACKAGE_WEIGHT",
+        "name": "Peso da embalagem",
+        "value_id": null,
+        "value_name": "5450 g",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5450,
+          "unit": "g"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "5450 g",
+            "struct": {
+              "unit": "g",
+              "number": 5450
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "SALE_FORMAT",
+        "name": "Formato de venda",
+        "value_id": "1359391",
+        "value_name": "Unidade",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "1359391",
+            "name": "Unidade",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "UNITS_PER_PACK",
+        "name": "Unidades por kit",
+        "value_id": "2726554",
+        "value_name": "1",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2726554",
+            "name": "1",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number"
+      },
+      {
+        "id": "UNIT_VOLUME",
+        "name": "Volume da unidade",
+        "value_id": "4668120",
+        "value_name": "5 L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5,
+          "unit": "L"
+        },
+        "values": [
+          {
+            "id": "4668120",
+            "name": "5 L",
+            "struct": {
+              "unit": "L",
+              "number": 5
+            },
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number_unit"
+      }
+    ],
+    "installments": null,
+    "winner_item_id": null,
+    "catalog_listing": true,
+    "discounts": null,
+    "promotions": [
+    ],
+    "inventory_id": "DYTK43748"
+  },
+  {
+    "id": "MLB2907929947",
+    "title": "Água Sanitária Cloro Ativo 5 Litros Ypê",
+    "condition": "new",
+    "thumbnail_id": "714071-MLU70350639958_072023",
+    "catalog_product_id": "MLB19745649",
+    "listing_type_id": "gold_special",
+    "permalink": "https://www.mercadolivre.com.br/agua-sanitaria-cloro-ativo-5-litros-yp/p/MLB19745649",
+    "buying_mode": "buy_it_now",
+    "site_id": "MLB",
+    "category_id": "MLB191460",
+    "domain_id": "MLB-BLEACHES",
+    "thumbnail": "http://http2.mlstatic.com/D_714071-MLU70350639958_072023-I.jpg",
+    "currency_id": "BRL",
+    "order_backend": 1,
+    "price": 13,
+    "original_price": 13.19,
+    "sale_price": null,
+    "available_quantity": 500,
+    "official_store_id": 4996,
+    "official_store_name": "Carrefour Mercado",
+    "use_thumbnail_id": true,
+    "accepts_mercadopago": true,
+    "shipping": {
+      "store_pick_up": false,
+      "free_shipping": false,
+      "logistic_type": "fulfillment",
+      "mode": "me2",
+      "tags": [
+        "fulfillment"
+      ],
+      "benefits": null,
+      "promise": null
+    },
+    "stop_time": "2042-10-26T04:00:00.000Z",
+    "seller": {
+      "id": 1188362425,
+      "nickname": "CARREFOUR MERCADO"
+    },
+    "attributes": [
+      {
+        "id": "BRAND",
+        "name": "Marca",
+        "value_id": "8974802",
+        "value_name": "Ypê",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "8974802",
+            "name": "Ypê",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condição do item",
+        "value_id": "2230284",
+        "value_name": "Novo",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Novo",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "LINE",
+        "name": "Linha",
+        "value_id": "13408338",
+        "value_name": "Água Sanitária e Alvejante",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "13408338",
+            "name": "Água Sanitária e Alvejante",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "MODEL",
+        "name": "Modelo",
+        "value_id": null,
+        "value_name": "5L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": null,
+            "name": "5L",
+            "struct": null,
+            "source": 8139005603237814
+          }
+        ],
+        "source": 8139005603237814,
+        "value_type": "string"
+      },
+      {
+        "id": "PACKAGE_LENGTH",
+        "name": "Comprimento da embalagem",
+        "value_id": null,
+        "value_name": "16.4 cm",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 16.4,
+          "unit": "cm"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "16.4 cm",
+            "struct": {
+              "number": 16.4,
+              "unit": "cm"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "PACKAGE_WEIGHT",
+        "name": "Peso da embalagem",
+        "value_id": null,
+        "value_name": "5450 g",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5450,
+          "unit": "g"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "5450 g",
+            "struct": {
+              "unit": "g",
+              "number": 5450
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "SALE_FORMAT",
+        "name": "Formato de venda",
+        "value_id": "1359391",
+        "value_name": "Unidade",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "1359391",
+            "name": "Unidade",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "UNITS_PER_PACK",
+        "name": "Unidades por kit",
+        "value_id": "2726554",
+        "value_name": "1",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2726554",
+            "name": "1",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number"
+      },
+      {
+        "id": "UNIT_VOLUME",
+        "name": "Volume da unidade",
+        "value_id": "4668120",
+        "value_name": "5 L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5,
+          "unit": "L"
+        },
+        "values": [
+          {
+            "id": "4668120",
+            "name": "5 L",
+            "struct": {
+              "unit": "L",
+              "number": 5
+            },
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number_unit"
+      }
+    ],
+    "installments": null,
+    "winner_item_id": null,
+    "catalog_listing": true,
+    "discounts": null,
+    "promotions": [
+    ],
+    "inventory_id": "DYTK43748"
+  },
+  {
+    "id": "MLB2907929947",
+    "title": "Água Sanitária Cloro Ativo 5 Litros Ypê",
+    "condition": "new",
+    "thumbnail_id": "714071-MLU70350639958_072023",
+    "catalog_product_id": "MLB19745649",
+    "listing_type_id": "gold_special",
+    "permalink": "https://www.mercadolivre.com.br/agua-sanitaria-cloro-ativo-5-litros-yp/p/MLB19745649",
+    "buying_mode": "buy_it_now",
+    "site_id": "MLB",
+    "category_id": "MLB191460",
+    "domain_id": "MLB-BLEACHES",
+    "thumbnail": "http://http2.mlstatic.com/D_714071-MLU70350639958_072023-I.jpg",
+    "currency_id": "BRL",
+    "order_backend": 1,
+    "price": 13,
+    "original_price": 13.19,
+    "sale_price": null,
+    "available_quantity": 500,
+    "official_store_id": 4996,
+    "official_store_name": "Carrefour Mercado",
+    "use_thumbnail_id": true,
+    "accepts_mercadopago": true,
+    "shipping": {
+      "store_pick_up": false,
+      "free_shipping": false,
+      "logistic_type": "fulfillment",
+      "mode": "me2",
+      "tags": [
+        "fulfillment"
+      ],
+      "benefits": null,
+      "promise": null
+    },
+    "stop_time": "2042-10-26T04:00:00.000Z",
+    "seller": {
+      "id": 1188362425,
+      "nickname": "CARREFOUR MERCADO"
+    },
+    "attributes": [
+      {
+        "id": "BRAND",
+        "name": "Marca",
+        "value_id": "8974802",
+        "value_name": "Ypê",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "8974802",
+            "name": "Ypê",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condição do item",
+        "value_id": "2230284",
+        "value_name": "Novo",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Novo",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "LINE",
+        "name": "Linha",
+        "value_id": "13408338",
+        "value_name": "Água Sanitária e Alvejante",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "13408338",
+            "name": "Água Sanitária e Alvejante",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "MODEL",
+        "name": "Modelo",
+        "value_id": null,
+        "value_name": "5L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": null,
+            "name": "5L",
+            "struct": null,
+            "source": 8139005603237814
+          }
+        ],
+        "source": 8139005603237814,
+        "value_type": "string"
+      },
+      {
+        "id": "PACKAGE_LENGTH",
+        "name": "Comprimento da embalagem",
+        "value_id": null,
+        "value_name": "16.4 cm",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 16.4,
+          "unit": "cm"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "16.4 cm",
+            "struct": {
+              "number": 16.4,
+              "unit": "cm"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "PACKAGE_WEIGHT",
+        "name": "Peso da embalagem",
+        "value_id": null,
+        "value_name": "5450 g",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5450,
+          "unit": "g"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "5450 g",
+            "struct": {
+              "unit": "g",
+              "number": 5450
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "SALE_FORMAT",
+        "name": "Formato de venda",
+        "value_id": "1359391",
+        "value_name": "Unidade",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "1359391",
+            "name": "Unidade",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "UNITS_PER_PACK",
+        "name": "Unidades por kit",
+        "value_id": "2726554",
+        "value_name": "1",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2726554",
+            "name": "1",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number"
+      },
+      {
+        "id": "UNIT_VOLUME",
+        "name": "Volume da unidade",
+        "value_id": "4668120",
+        "value_name": "5 L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5,
+          "unit": "L"
+        },
+        "values": [
+          {
+            "id": "4668120",
+            "name": "5 L",
+            "struct": {
+              "unit": "L",
+              "number": 5
+            },
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number_unit"
+      }
+    ],
+    "installments": null,
+    "winner_item_id": null,
+    "catalog_listing": true,
+    "discounts": null,
+    "promotions": [
+    ],
+    "inventory_id": "DYTK43748"
+  },
+  {
+    "id": "MLB2789595826",
+    "title": "Balde Perfect Mop 360º Com 3 Refis Mop Limpeza",
+    "condition": "new",
+    "thumbnail_id": "720776-MLU72565302186_112023",
+    "catalog_product_id": "MLB19532359",
+    "listing_type_id": "gold_special",
+    "permalink": "https://www.mercadolivre.com.br/balde-perfect-mop-360-com-3-refis-mop-limpeza/p/MLB19532359",
+    "buying_mode": "buy_it_now",
+    "site_id": "MLB",
+    "category_id": "MLB186655",
+    "domain_id": "MLB-CLEANING_MOPS",
+    "thumbnail": "http://http2.mlstatic.com/D_720776-MLU72565302186_112023-I.jpg",
+    "currency_id": "BRL",
+    "order_backend": 5,
+    "price": 145,
+    "original_price": null,
+    "sale_price": null,
+    "available_quantity": 500,
+    "official_store_id": 1469,
+    "official_store_name": "DdMaquinas",
+    "use_thumbnail_id": true,
+    "accepts_mercadopago": true,
+    "shipping": {
+      "store_pick_up": false,
+      "free_shipping": true,
+      "logistic_type": "fulfillment",
+      "mode": "me2",
+      "tags": [
+        "fulfillment",
+        "mandatory_free_shipping"
+      ],
+      "benefits": null,
+      "promise": null
+    },
+    "stop_time": "2044-01-27T18:04:33.000Z",
+    "seller": {
+      "id": 160243440,
+      "nickname": "DDMAQUINAS"
+    },
+    "attributes": [
+      {
+        "id": "UNITS_PER_PACKAGE",
+        "name": "Unidades por embalagem",
+        "value_id": "-1",
+        "value_name": null,
+        "attribute_group_id": "",
+        "attribute_group_name": "",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "-1",
+            "name": null,
+            "struct": null,
+            "source": 3376461333454861
+          }
+        ],
+        "source": 3376461333454861,
+        "value_type": "integer"
+      },
+      {
+        "id": "BRAND",
+        "name": "Marca",
+        "value_id": "2693264",
+        "value_name": "Perfect",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2693264",
+            "name": "Perfect",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condição do item",
+        "value_id": "2230284",
+        "value_name": "Novo",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Novo",
+            "struct": null,
+            "source": 8185932553428486
+          }
+        ],
+        "source": 8185932553428486,
+        "value_type": "list"
+      },
+      {
+        "id": "MODEL",
+        "name": "Modelo",
+        "value_id": "13021184",
+        "value_name": "MOP PRO",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "13021184",
+            "name": "MOP PRO",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "PACKAGE_LENGTH",
+        "name": "Comprimento da embalagem",
+        "value_id": null,
+        "value_name": "31.1 cm",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 31.1,
+          "unit": "cm"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "31.1 cm",
+            "struct": {
+              "number": 31.1,
+              "unit": "cm"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "PACKAGE_WEIGHT",
+        "name": "Peso da embalagem",
+        "value_id": null,
+        "value_name": "2640 g",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 2640,
+          "unit": "g"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "2640 g",
+            "struct": {
+              "number": 2640,
+              "unit": "g"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "SALE_FORMAT",
+        "name": "Formato de venda",
+        "value_id": "1359391",
+        "value_name": "Unidade",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "1359391",
+            "name": "Unidade",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "UNITS_PER_PACK",
+        "name": "Unidades por kit",
+        "value_id": "2726554",
+        "value_name": "1",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2726554",
+            "name": "1",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number"
+      }
+    ],
+    "installments": {
+      "quantity": 12,
+      "amount": 14.06,
+      "rate": 16.34,
+      "currency_id": "BRL"
+    },
+    "winner_item_id": null,
+    "catalog_listing": true,
+    "discounts": null,
+    "promotions": [
+    ],
+    "inventory_id": "NWNJ19002"
+  },
+  {
+    "id": "MLB2907929947",
+    "title": "Água Sanitária Cloro Ativo 5 Litros Ypê",
+    "condition": "new",
+    "thumbnail_id": "714071-MLU70350639958_072023",
+    "catalog_product_id": "MLB19745649",
+    "listing_type_id": "gold_special",
+    "permalink": "https://www.mercadolivre.com.br/agua-sanitaria-cloro-ativo-5-litros-yp/p/MLB19745649",
+    "buying_mode": "buy_it_now",
+    "site_id": "MLB",
+    "category_id": "MLB191460",
+    "domain_id": "MLB-BLEACHES",
+    "thumbnail": "http://http2.mlstatic.com/D_714071-MLU70350639958_072023-I.jpg",
+    "currency_id": "BRL",
+    "order_backend": 1,
+    "price": 13,
+    "original_price": 13.19,
+    "sale_price": null,
+    "available_quantity": 500,
+    "official_store_id": 4996,
+    "official_store_name": "Carrefour Mercado",
+    "use_thumbnail_id": true,
+    "accepts_mercadopago": true,
+    "shipping": {
+      "store_pick_up": false,
+      "free_shipping": false,
+      "logistic_type": "fulfillment",
+      "mode": "me2",
+      "tags": [
+        "fulfillment"
+      ],
+      "benefits": null,
+      "promise": null
+    },
+    "stop_time": "2042-10-26T04:00:00.000Z",
+    "seller": {
+      "id": 1188362425,
+      "nickname": "CARREFOUR MERCADO"
+    },
+    "attributes": [
+      {
+        "id": "BRAND",
+        "name": "Marca",
+        "value_id": "8974802",
+        "value_name": "Ypê",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "8974802",
+            "name": "Ypê",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "ITEM_CONDITION",
+        "name": "Condição do item",
+        "value_id": "2230284",
+        "value_name": "Novo",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2230284",
+            "name": "Novo",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "LINE",
+        "name": "Linha",
+        "value_id": "13408338",
+        "value_name": "Água Sanitária e Alvejante",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "13408338",
+            "name": "Água Sanitária e Alvejante",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "string"
+      },
+      {
+        "id": "MODEL",
+        "name": "Modelo",
+        "value_id": null,
+        "value_name": "5L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": null,
+            "name": "5L",
+            "struct": null,
+            "source": 8139005603237814
+          }
+        ],
+        "source": 8139005603237814,
+        "value_type": "string"
+      },
+      {
+        "id": "PACKAGE_LENGTH",
+        "name": "Comprimento da embalagem",
+        "value_id": null,
+        "value_name": "16.4 cm",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 16.4,
+          "unit": "cm"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "16.4 cm",
+            "struct": {
+              "number": 16.4,
+              "unit": "cm"
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "PACKAGE_WEIGHT",
+        "name": "Peso da embalagem",
+        "value_id": null,
+        "value_name": "5450 g",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5450,
+          "unit": "g"
+        },
+        "values": [
+          {
+            "id": null,
+            "name": "5450 g",
+            "struct": {
+              "unit": "g",
+              "number": 5450
+            },
+            "source": 4333789534002961
+          }
+        ],
+        "source": 4333789534002961,
+        "value_type": "number_unit"
+      },
+      {
+        "id": "SALE_FORMAT",
+        "name": "Formato de venda",
+        "value_id": "1359391",
+        "value_name": "Unidade",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "1359391",
+            "name": "Unidade",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "list"
+      },
+      {
+        "id": "UNITS_PER_PACK",
+        "name": "Unidades por kit",
+        "value_id": "2726554",
+        "value_name": "1",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": null,
+        "values": [
+          {
+            "id": "2726554",
+            "name": "1",
+            "struct": null,
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number"
+      },
+      {
+        "id": "UNIT_VOLUME",
+        "name": "Volume da unidade",
+        "value_id": "4668120",
+        "value_name": "5 L",
+        "attribute_group_id": "OTHERS",
+        "attribute_group_name": "Outros",
+        "value_struct": {
+          "number": 5,
+          "unit": "L"
+        },
+        "values": [
+          {
+            "id": "4668120",
+            "name": "5 L",
+            "struct": {
+              "unit": "L",
+              "number": 5
+            },
+            "source": 1
+          }
+        ],
+        "source": 1,
+        "value_type": "number_unit"
+      }
+    ],
+    "installments": null,
+    "winner_item_id": null,
+    "catalog_listing": true,
+    "discounts": null,
+    "promotions": [
+    ],
+    "inventory_id": "DYTK43748"
+  }
+]

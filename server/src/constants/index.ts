@@ -5,6 +5,7 @@ export default {
   port: process.env.PORT,
   testDbUri: "mongodb://localhost:27017/test",
   productsUrl: "https://api.mercadolibre.com/sites/MLB/search?q=",
+  productsByCategory: "https://api.mercadolibre.com/sites/MLB/search?category=",
   productsCategories: "https://api.mercadolibre.com/sites/MLB/categories",
   productById: "https://api.mercadolibre.com/items/",
 };

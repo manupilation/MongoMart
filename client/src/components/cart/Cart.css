@@ -1,0 +1,124 @@
+.cart {
+  display: flex;
+  gap: 1.5rem;
+  background-color: #FFF;
+  margin: 4rem 2rem;
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+  box-sizing: border-box;
+
+  .productPriceSection {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 12px;
+
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .calcTotalPrice {
+    display: flex;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    padding: 1rem 1.4rem;
+    border-radius: 8px;
+    background-color: #00A650;
+    color: aliceblue;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .userProduct {
+    display: flex;
+    flex-direction: column;
+    .quantityControl {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+      margin-top: auto;
+  
+      span {
+        padding: .5rem;
+        border-radius: 50%;
+        line-height: .5rem;
+        
+        &.increase {  
+          background-color: #00A650;
+          color: #FFF;
+        }
+  
+        &.decrease {
+          background-color: #c22e14;
+          color: #FFF;
+        }
+      }
+  }
+
+
+    input {
+      width: 20%;
+      padding: .4rem .8rem;
+    }
+  }
+
+  .confirm {
+    position: absolute;
+    top: -20px;
+    right: 0;
+    button {
+      cursor: pointer;
+      padding: .8rem .8rem;
+      border: none;
+      background-color: #2968C8;
+      color: #FFF;
+      font-size: 1rem;
+      border-radius: 8px;
+    }
+  }
+
+  .confirmBuyContainer {
+    background-color: #FFF;
+    padding: 2rem;
+    border-radius: 16px;
+    width: 500px;
+    height: 250px;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      font-family: "Poppins";
+      line-height: 40px;
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 40px;
+
+      button {
+        cursor: pointer;
+        color: aliceblue;
+        padding: .7rem 1.4rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        background-color: #777;
+
+        &:nth-child(2) {
+          background-color: #2968C8;
+        }
+      }
+    }
+  }
+
+  .remove {
+    width: 16px;
+    height: 16px;
+  }
+}

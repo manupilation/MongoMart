@@ -34,6 +34,13 @@ class ProductController {
     res.status(HttpStatus.OK).json({ products });
   });
 
+  getMlProductsByCategory = resolver(async (req: Request, res: Response, _: NextFunction): Promise<void> =>{
+    const { name } = req.params;
+    const products = await this.mlProduct.getProductsByCategory(name);
+
+    res.status(HttpStatus.OK).json({ products });
+  });
+
   getMlProductById = resolver(async (req: Request, res: Response, _: NextFunction): Promise<void> => {
     const {id} = req.params;
     const product = await this.mlProduct.getProductById(id);
