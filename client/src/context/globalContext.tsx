@@ -8,6 +8,7 @@ type GlobalContextTypes = {
   isEditing: boolean,
   isUser: boolean,
   categories: category[],
+  cart: UserProduct[],
   cartItens: string[],
   buyProducts: UserProductBuy[],
   setProducts: React.Dispatch<React.SetStateAction<product[]>>,
@@ -16,6 +17,7 @@ type GlobalContextTypes = {
   setIsCreating: React.Dispatch<React.SetStateAction<boolean>>,
   setIsUser: React.Dispatch<React.SetStateAction<boolean>>,
   setCategories: React.Dispatch<React.SetStateAction<category[]>>,
+  setCart: React.Dispatch<React.SetStateAction<UserProduct[]>>,
   setCartItens: React.Dispatch<React.SetStateAction<string[]>>,
   setBuyProducts: React.Dispatch<React.SetStateAction<UserProductBuy[]>>,
 }
@@ -35,6 +37,7 @@ const GlobalContext = (props: GlobalProps) => {
   const [categories, setCategories] = useState<category[]>([]);
   const [cartItens, setCartItens] = useState<string[]>([]);
   const [buyProducts, setBuyProducts] = useState<UserProductBuy[]>([]);
+  const [cart, setCart] = useState<UserProduct[]>([]);
 
   const globalValue = {
     products,
@@ -43,6 +46,7 @@ const GlobalContext = (props: GlobalProps) => {
     isUser,
     userProducts,
     categories,
+    cart,
     cartItens,
     buyProducts,
     setProducts,
@@ -51,6 +55,7 @@ const GlobalContext = (props: GlobalProps) => {
     setIsUser,
     setUserProducts,
     setCategories,
+    setCart,
     setCartItens,
     setBuyProducts
   }

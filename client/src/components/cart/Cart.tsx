@@ -1,14 +1,13 @@
 import { useContext, useEffect, useState } from "react";
 import { globalContext } from "../../context/globalContext";
 import { url } from "../../config/url";
-import { UserProduct } from "../../types/product";
 import CartItem from "./CartItem";
 import "./Cart.css";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cartItens, buyProducts } = useContext(globalContext);
-  const [cart, setCart] = useState<UserProduct[]>([]);
+  const { cartItens, buyProducts, setCartItens, setBuyProducts, cart, setCart } = useContext(globalContext);
+
   const [buyAction, setBuyAction] = useState(false);
   const navigate = useNavigate();
 
@@ -33,7 +32,7 @@ const Cart = () => {
   const calcTotalValue = () => {
     return Math.abs(
       buyProducts.reduce((total, product) => {
-        return total + product.quantity * product.price;
+        return total + (product.quantity * product.price);
       }, 0)
     )
       .toFixed(2)
@@ -66,7 +65,9 @@ const Cart = () => {
         })),
       }),
     });
-
+    setCartItens([]);
+    setCart([]);
+    setBuyProducts([]);
     navigate("/confirmBuy");
   };
 

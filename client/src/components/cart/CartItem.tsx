@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from 'react';
 import { UserProduct } from '../../types/product';
 import { globalContext } from '../../context/globalContext';
+import lixeira from "../../assets/lixeira.png";
 import './Cart.css';
 
 const CartItem = (props: Partial<UserProduct>) => {
-  const { setBuyProducts, buyProducts } = useContext(globalContext);
+  const { setBuyProducts, setCartItens, setCart } = useContext(globalContext);
   const { title, price, thumbnail, id } = props;
   const [quantity, setQuantity] = useState(1);
 
@@ -18,6 +19,12 @@ const CartItem = (props: Partial<UserProduct>) => {
     setQuantity(quantity + 1);
   };
 
+  const removeFromCart = () => {
+    setCart(prevProducts => [...prevProducts.filter(product => product.id !== id)]);
+    setCartItens(prevCartItems => [...prevCartItems.filter(item => item !== id)]);
+    setBuyProducts(prevProducts => [...prevProducts.filter(product => product.id !== id)]);
+  };
+
   useEffect(() => {
     if (id && title && price) {
       const newProduct = {
@@ -27,15 +34,16 @@ const CartItem = (props: Partial<UserProduct>) => {
         quantity,
       };
 
-      const existingProductIndex = buyProducts.findIndex(product => product.id === id);
-
-      if (existingProductIndex !== -1) {
-        const updatedProducts = [...buyProducts];
-        updatedProducts[existingProductIndex].quantity = quantity;
-        setBuyProducts(updatedProducts);
-      } else {
-        setBuyProducts(prevProducts => [...prevProducts, newProduct]);
-      }
+      setBuyProducts(prevProducts => {
+        const existingProductIndex = prevProducts.findIndex(product => product.id === id);
+        if (existingProductIndex !== -1) {
+          const updatedProducts = [...prevProducts];
+          updatedProducts[existingProductIndex].quantity = quantity;
+          return updatedProducts;
+        } else {
+          return [...prevProducts, newProduct];
+        }
+      });
     }
   }, [quantity]);
 
@@ -53,6 +61,8 @@ const CartItem = (props: Partial<UserProduct>) => {
         <input type='number' value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value) || 0)} />
         <span onClick={increaseQuantity} className='increase'>{"+"}</span>
       </div>
+
+      <img className="remove" src={lixeira} alt="" onClick={removeFromCart}/>
     </div>
   );
 };

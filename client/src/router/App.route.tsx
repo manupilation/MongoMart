@@ -11,6 +11,7 @@ import { globalContext } from "../context/globalContext";
 import { useContext } from "react";
 import UserProductPage from "../components/UserProductPage/UserProductPage";
 import Cart from "../components/cart/Cart";
+import Success from "../components/Success/Success";
 
 function UserApp() {
   return (
@@ -39,6 +40,7 @@ const AppRoute = () => {
         <Route path="/list/:category" element={<UserApp />} />
         <Route path="/product/:id" element={<UserProductPage />}/>
         <Route path="/cart" element={<Cart />} />
+        <Route path="/confirmBuy" element={<Success />} />
         <Route path="/" element={isUser ? <UserApp /> : <AdmApp />} />
       </Routes>
     </BrowserRouter>
