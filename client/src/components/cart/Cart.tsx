@@ -3,45 +3,121 @@ import { globalContext } from "../../context/globalContext";
 import { url } from "../../config/url";
 import { UserProduct } from "../../types/product";
 import CartItem from "./CartItem";
-import "./Cart.css"
+import "./Cart.css";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const {cartItens} = useContext(globalContext);
+  const { cartItens, buyProducts } = useContext(globalContext);
   const [cart, setCart] = useState<UserProduct[]>([]);
-  
+  const [buyAction, setBuyAction] = useState(false);
+  const navigate = useNavigate();
+
   useEffect(() => {
-    async function fetchCartItens() {
-      const allItens: Promise<Response>[] = [];
+    async function fetchCartItems() {
+      const allItems: Promise<Response>[] = [];
       cartItens.forEach((itemId) => {
-        allItens.push(fetch(url.backend + "ml/product/item/" + itemId));
+        allItems.push(fetch(url.backend + "ml/product/item/" + itemId));
       });
-      const consultItens = await Promise.all(allItens)
-      const itens = await Promise.all(consultItens.map((item) => item.json()));
-      const reduceItens = itens.reduce((acc, curr) => {
-        return [...acc, curr.product]
+      const consultItems = await Promise.all(allItems);
+      const items = await Promise.all(consultItems.map((item) => item.json()));
+      const reducedItems = items.reduce((acc, curr) => {
+        return [...acc, curr.product];
       }, []);
 
-      setCart(reduceItens);
-    }    
+      setCart(reducedItems);
+    }
 
-    fetchCartItens();
+    fetchCartItems();
   }, []);
+
+  const calcTotalValue = () => {
+    return Math.abs(
+      buyProducts.reduce((total, product) => {
+        return total + product.quantity * product.price;
+      }, 0)
+    )
+      .toFixed(2)
+      .replace(".", ",");
+  };
+
+  const cancelBuy = () => {
+    setBuyAction(false);
+  };
+
+  const activeBuy = () => {
+    setBuyAction(true);
+  };
+
+  const efetuarCompra = async () => {
+    const filterProducts = buyProducts.filter((product) => product.quantity > 0);
+
+    await fetch(url.backend + "acquiredProduct", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user: "userManu",
+        products: filterProducts.map((product) => ({
+          name: product.name,
+          quantity: product.quantity,
+          price: product.price,
+          id: product.id,
+        })),
+      }),
+    });
+
+    navigate("/confirmBuy");
+  };
 
   return (
     <div className="cart">
-      {
-        cart.length
-        ? cart.map((item) => {
-          return <CartItem
-            thumbnail={item.thumbnail}
-            title={item.title}
-            price={item.price}
-          />
+      <div className="calcTotalPrice">
+        <h3>R$ {calcTotalValue()}</h3>
+      </div>
+
+      <div className="confirm">
+        <button
+          className="confirmBuyBtn"
+          disabled={!cartItens.length}
+          onClick={activeBuy}
+        >
+          CONFIRMAR COMPRA
+        </button>
+      </div>
+
+      {cart.length ? (
+        cart.map((item, i) => {
+          return (
+            <CartItem
+              thumbnail={item.thumbnail}
+              title={item.title}
+              price={item.price}
+              key={i}
+              id={item.id}
+            />
+          );
         })
-        : null
-      }
+      ) : (
+        <div className="cart">Você ainda não adicionou nenhum item no carrinho.</div>
+      )}
+
+      {buyAction ? (
+        <div className="modalContainer">
+          <div className="confirmBuyContainer">
+            <h1>Deseja confirmar suas compras no valor de R$ {calcTotalValue()}?</h1>
+
+            <div>
+              <button onClick={cancelBuy}>CANCELAR</button>
+              <button className="confirmBuyBtn" onClick={efetuarCompra}>
+                CONFIRMAR COMPRA
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </div>
   );
-}
+};
 
 export default Cart;

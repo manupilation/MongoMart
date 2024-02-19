@@ -53,7 +53,7 @@ const UserProductPage = () => {
         <img src={userProduct.thumbnail} alt="Product" />
       </div>
       <div className="productContent">
-        <h1>{userProduct.title}</h1>
+        <h1 className="productPageTitle">{userProduct.title}</h1>
         <div className="priceContainer">
           <div>
             <h3 className="price">R$ {userProduct.price}</h3>
@@ -77,7 +77,7 @@ const UserProductPage = () => {
         </div>
       </div>
 
-      <a onClick={() => turnBack()}>VOLTAR</a>
+      <a onClick={() => turnBack()} className="turnBackBtn">VOLTAR</a>
     </div>
   )
 

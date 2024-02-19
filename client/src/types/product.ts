@@ -55,6 +55,13 @@ export type UserProduct = {
   inventory_id: string | null;
 };
 
+export type UserProductBuy = {
+  id: string,
+  name: string,
+  price: number,
+  quantity: number
+}
+
 export type category = {
   name: string,
   id: string,

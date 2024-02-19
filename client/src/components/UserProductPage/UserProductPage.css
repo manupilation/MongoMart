@@ -1,4 +1,5 @@
 .productPage {
+  cursor: default;
   display: grid;
   grid-template-columns: auto 1fr;
   background-color: #FFF;
@@ -8,6 +9,10 @@
   padding: 1rem;
   width: 60%;
   box-sizing: border-box;
+
+  .productPageTitle {
+    font-size: 30px;
+  }
 
   .portata {
     width: 200px;
@@ -22,12 +27,17 @@
       display: flex;
       flex-direction: column;
 
+      .price {
+        font-size: 20px;
+      }
+
       .discountRate {
         color: #00A650;
       }
     }
 
     .addCart {
+      cursor: pointer;   
       place-self: end;
       padding: .7rem .8rem;
       background-color: #2968C8;
@@ -35,5 +45,14 @@
       border: none;
       border-radius: 8px;
     }
+  }
+
+  .turnBackBtn {
+    cursor: pointer;   
+    background-color: #555;
+    color: #F6F6F6;
+    place-self: center;
+    padding: .6rem .8rem;
+    border-radius: 8px;
   }
 }
